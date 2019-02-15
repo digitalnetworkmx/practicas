@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Buscador de imágenes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://semantic-ui.com/dist/components/icon.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="practica2.js"></script>
+  </head>
+  <body>
+    <div class="ui container">
+      <div class="ui fluid container" style="margin-top:30px">
+        <h2 class="header">Buscador de gif's</h2>
+      </div>
+
+      <div class="ui fluid container">
+        <form class="ui form">
+          <h3 class="ui dividing header">Ingresa </h4>
+          <div class="field">
+            <input type="text" name="cajaBuscador" id="cajaBuscador" placeholder="Ingresa el nombre de lo que quieras buscar">
+          </div>
+          <div class="ui green labeled icon button" id="enviar">
+            <i class="search icon"></i>
+            Buscar
+          </div>
+        </form>
+      </div>
+
+      <img class="ui large image" src="" id="gif">
+      <div class="ui visible dimmer" id="carga">
+        <div class="ui text loader">Loading</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+#tablero{
+  width: 420px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  border:2px solid black;
+}
+
+.fila{
+  width: 100%;
+  height: 34%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cuadro{
+  width: 34%;
+  height: 100%;
+  border:1px solid gray;
+}
+
+#contenedorPiezas{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pieza{
+  width: 140px;
+  margin:10px;
+  height: 140px;
+  border: 1px solid black;
+}

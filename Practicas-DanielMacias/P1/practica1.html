@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Actividad2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://semantic-ui.com/dist/components/icon.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="practica1.js"></script>
+  </head>
+
+  <body>
+    <div class="ui container">
+      <div class="ui fluid container" style="margin-top:30px;margin-bottom:30px;padding-bottom:50px">
+        <h2 class="ui header">Consultar direccion</h2>
+      </div>
+
+      <div class="ui fluid container">
+        <form class="ui form" id="form">
+          <div class="field">
+            <label>Código Postal</label>
+            <input type="text" name="CP" id="CP" placeholder="Escribe tu código postal">
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>Municipio</label>
+              <input type="text" name="Municipio" id="Municipio" placeholder="Municipio">
+            </div>
+            <div class="field">
+              <label>Estado</label>
+              <input type="text" name="Estado" id="Estado" placeholder="Estados">
+            </div>
+          </div>
+          <div class="field">
+            <label>Colonias</label>
+            <select class="ui fluid search dropdown" name="colonia" id="colonia">
+              <option value="">Colonia</option>
+            </select>
+          </div>
+          <div class="ui blue labeled icon button" id="enviar">
+            <i class="save icon"></i>
+            Enviar
+          </div>
+        </form>
+        <div class="ui visible dimmer" id="carga">
+          <div class="ui text loader">Loading</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

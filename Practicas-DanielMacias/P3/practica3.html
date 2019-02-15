@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos de funciones JQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://semantic-ui.com/dist/components/icon.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="practica3.js"></script>
+  </head>
+
+  <body>
+    <div class="ui container">
+      <div class="ui fluid container" style="margin:20px 0px">
+        <h2 class="header">Functiones JQuery</h2>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Children
+          </div>
+        </h3>
+        <div class="ui grid" id="children">
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+          <div class="four wide column"></div>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Find
+          </div>
+        </h3>
+        <div class="ui ordered list" id="lista">
+          <a class="item">Getting Started</a>
+          <a class="item">Introduction</a>
+          <div class="item">
+            <a>Languages</a>
+            <div class="list">
+              <a class="item sub">HTML</a>
+              <a class="item sub">Javascript</a>
+              <a class="item sub">CSS</a>
+            </div>
+          </div>
+          <a class="item">Review</a>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Parent
+          </div>
+        </h3>
+
+        <div class="ui fluid container">
+          <div class="ui green message">Mi padre también será de color verde</div>
+          <button class="ui green button" id="btnParent">Cambiar color al padre</button>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Parents
+          </div>
+        </h3>
+        <div class="ui fluid container">
+          <p>Ancestro Padre</p>
+          <div class="ui fluid container">
+            <p>Padre directo</p>
+            <button class="ui purple button" id="btnParents">Cambiar colo
+
+              r de texto de todos mis elementos padre</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Closest
+          </div>
+        </h3>
+
+        <div class="ui fluid container">
+          <p>Ancestro Padre</p>
+          <div class="ui fluid container">
+            <p>Padre directo</p>
+            <button class="ui red button" id="btnClosest">Colocar imagen de fondo a mi ancestro div más cercano</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Siblings
+          </div>
+        </h3>
+
+        <div class="ui fluid container">
+          <p>Hermano 1</p>
+          <p>Hermano 2</p>
+          <p>Hermano 3</p>
+          <button class="ui red button" id="btnSiblings">Cambiar tamaño de mis hermanos elementos</button>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Append
+          </div>
+        </h3>
+
+        <div class="ui fluid container" style="border:1px solid black;" id="appendContenedor">
+          <button class="ui primary button" id="btnAppend">Agregar una imagen dentro del contenedor al final del mismo</button>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            Prepend
+          </div>
+        </h3>
+
+        <div class="ui fluid container" style="border:1px solid black;" id="prependContenedor">
+          <button class="ui primary button" id="btnPrepend">Agregar una imagen dentro del contenedor al inicio del mismo</button>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            .html()
+          </div>
+        </h3>
+
+        <div class="ui fluid container" id="content">
+          <button class="ui white button" id="btnHTML">Agregar un formulario simple</button>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <h3 class="ui header" style="margin:20px 0px">
+          <img src="https://semantic-ui.com/images/icons/plugin.png">
+          <div class="content">
+            .text()
+          </div>
+        </h3>
+
+        <div class="ui fluid container">
+          <button class="ui pink button" id="btnText">Cambiar texto al párrafo</button>
+          <p style="font-size:18px">Cambia mi contenido</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

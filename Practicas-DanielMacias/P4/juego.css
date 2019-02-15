@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+/* background-image: linear-gradient(to bottom right,black,white); */
+}
+
+.vidas{
+  display: flex;
+  justify-content: space-around;
+  width:20%;
+  height: 30%;
+  /* background-color: pink; */
+  position:absolute;
+  top:0;
+  left: 0;
+}
+
+.vida{
+  background-image: url("https://s3.amazonaws.com/user-media.venngage.com/813613-f341094aa68e0da08267ab22cc74ae2e.png");
+background-repeat: no-repeat;
+background-size: cover;
+/* background-position: center; */
+ margin: 10px;
+  /* background-color: blue; */
+  width:50px;
+  height:50px;
+}
+
+.money{
+  margin: 10px;
+  position:absolute;
+  top:0;
+  right: 10;
+}
+.p1{
+  width:97%;
+  height:97%;
+  background-image: linear-gradient(to bottom right,#358EFA, purple);
+  margin:10px;
+}
+
+.juego{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+  width:100%;
+  height:50%;
+}
+#preg{
+  background-color: black;
+  width:70%;
+  height:30%;
+  color:white;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.juego2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  /* background-color: red; */
+  width:60%;
+  height:50%;
+
+}
+
+.resp{
+  font-family: 'Indie Flower', cursive;
+  background-color: black;
+  font-size: 25px;
+  width:40%;
+  height:20%;
+  margin: 30px;
+  color:white;
+
+}

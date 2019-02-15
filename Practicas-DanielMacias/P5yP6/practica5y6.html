@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arrastrar objetos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://semantic-ui.com/dist/components/icon.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="practica5y6.js"></script>
+    <style media="screen">
+      .preguntas, .respuestas{
+        height:70px;
+        border: 1px solid gray;
+      }
+      .respuestas{
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ui container">
+      <div class="ui fluid container" style="margin:20px 0px">
+        <h2 class="header">Draggable</h2>
+      </div>
+
+      <div class="ui fluid container" style="width:600px;height:400px;border:1px solid black;">
+        <img class="ui small image piezas" src="pieza3.png">
+        <img class="ui small image piezas" src="pieza2.png">
+        <img class="ui small image piezas" src="pieza4.png">
+        <img class="ui small image piezas" src="pieza1.png">
+      </div>
+
+      <div class="ui fluid container" style="margin:20px 0px">
+        <h2 class="header">Droppable</h2>
+        <p>Arrastre las respuestas a su respectiva pregunta</p>
+      </div>
+
+      <div class="ui grid equal width" id="preguntasYrespuestas">
+        <div class="ui fluid container preguntas four wide column" id="pregunta1">
+          <p>¿Cuál es la velocidad de la luz?</p>
+        </div>
+        <div class="ui fluid container preguntas four wide column" id="pregunta2">
+          <p>¿Cuál es la velocidad del sonido?</p>
+        </div>
+        <div class="ui fluid container preguntas four wide column" id="pregunta3">
+          <p>¿Cuál es la velocidad a la que puede alcanzar el ser humano?</p>
+        </div>
+
+        <div class="equal width row">
+          <div class="ui fluid container respuestas four wide column" id="respuesta1">
+            <p>45 km/h</p>
+          </div>
+          <div class="ui fluid container respuestas four wide column" id="respuesta2">
+            <p>300 000 km/s</p>
+          </div>
+          <div class="ui fluid container respuestas four wide column" id="respuesta3">
+            <p>343.2 m/s</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
