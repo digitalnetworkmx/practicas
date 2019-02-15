@@ -120,7 +120,7 @@ var sistema = function(){
   $('#mercurio').on("click",function(){
     clickMercurio++;
     console.log(clickMercurio);
-    if (clickMercurio==2) {
+    if (clickMercurio==20) {
       $('#mercurio').css({
         "background":"transparent"
       });
@@ -132,7 +132,7 @@ var sistema = function(){
   $('#venus').on("click",function(){
     clickVenus++;
     console.log(clickVenus);
-    if (clickVenus==1) {
+    if (clickVenus==30) {
       $('#venus').css({
         "background":"transparent"
       });
@@ -143,7 +143,7 @@ var sistema = function(){
   $('#tierra').on("click",function(){
     clickTierra++;
     console.log(clickTierra);
-    if (clickTierra==1) {
+    if (clickTierra==50) {
       $('#tierra').css({
         "background":"transparent"
       });
@@ -154,7 +154,7 @@ var sistema = function(){
   $('#marte').on("click",function(){
     clickMarte++;
     console.log(clickMarte);
-    if (clickMarte==1) {
+    if (clickMarte==80) {
       $('#marte').css({
         "background":"transparent"
       });
@@ -165,7 +165,7 @@ var sistema = function(){
   $('#jupiter').on("click",function(){
     clickJupiter++;
     console.log(clickJupiter);
-    if (clickJupiter==1) {
+    if (clickJupiter==160) {
       $('#jupiter').css({
         "background":"transparent"
       });
@@ -176,7 +176,7 @@ var sistema = function(){
   $('#saturno').on("click",function(){
     clickSaturno++;
     console.log(clickSaturno);
-    if (clickSaturno==1) {
+    if (clickSaturno==200) {
       $('#saturno').css({
         "background":"transparent"
       });
@@ -187,7 +187,7 @@ var sistema = function(){
   $('#urano').on("click",function(){
     clickUrano++;
     console.log(clickUrano);
-    if (clickUrano==1) {
+    if (clickUrano==250) {
       $('#urano').css({
         "background":"transparent"
       });
@@ -198,7 +198,7 @@ var sistema = function(){
   $('#neptuno').on("click",function(){
     clickNeptuno++;
     console.log(clickNeptuno);
-    if (clickNeptuno==1) {
+    if (clickNeptuno==300) {
       $('#neptuno').css({
         "background":"transparent"
       });
