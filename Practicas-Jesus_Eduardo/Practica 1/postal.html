@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+</head>
+<body>
+
+  <div class="ui container">
+    <div class="ui form">
+      <h4 class="ui dividing header">Registro de direccion</h4>
+      <div class="three fields">
+        <div class="field required">
+          <label>Nombre</label>
+          <input type="text" placeholder="Nombre">
+        </div>
+        <div class="field required">
+          <label>Apellido paterno</label>
+          <input type="text" placeholder="Apellido paterno">
+        </div>
+        <div class="field required">
+          <label>Apellido materno</label>
+          <input type="text" placeholder="Apellido materno">
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="four wide field">
+          <label>Codigo postal</label>
+          <div class="ui action input">
+            <input type="text" placeholder="Codigo Postal" id="codigo">
+            <button class="ui icon button">
+              <i class="plus icon" id="botoncodigo"></i>
+            </button>
+          </div>
+        </div>
+        <div class="twelve wide field">
+          <label>Colonia</label>
+          <select class="ui dropdown" id="colonia" >
+            <option value="">Selecciona una opcion</option>
+          </select>
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Municipio</label>
+          <div class="ui fluid input">
+            <input type="search" id="municipio" placeholder="Municipio" readonly="readonly">
+          </div>
+        </div>
+        <div class="field">
+          <label>Estado</label>
+          <div class="ui fluid input">
+            <input type="search" id="estado" placeholder="Estado" readonly="readonly">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script src="https://requenahdz.github.io/firebase/js/firebase.js"></script>
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+  <script type="text/javascript" src="funciones.js"></script>
+</body>
+</html>

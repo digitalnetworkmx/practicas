@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+</head>
+
+<body style="margin:0">
+  <div class="ui container">
+    <!-- children(); -->
+    <h1 class="ui dividing header">children()</h1>
+    <br>
+      <div class="padre">
+        <h5>Hijo</h5>
+      </div>
+      <!-- find(); -->
+      <h1 class="ui dividing header">find()</h1>
+      <div class="informacion">
+        <h3>Texas</h3>
+          <div>
+            <p>
+              <span>Texas el mejor lugar donde puedes ir a conocer a los cowboys que son unos expertos con los caballos y en la granja.</span>
+            </p>
+          </div>
+      </div>
+      <!-- parent() -->
+      <h1 class="ui dividing header">parent()</h1>
+      <div class="">
+          <p class="buscar">Se esta mostrando el marco del padre de este parrafo</p>
+      </div>
+      <!-- parents() -->
+      <h1 class="ui dividing header">parents()</h1>
+      <input type="button" id="boton" value="Picame para ver a los padres del span" style="border-radius:15px">
+      <br>
+      <div>
+        <div>
+          <div>
+              <span class="marcar">Mira a mis padres</span>
+          </div>
+        </div>
+      </div>
+      <!-- closest() -->
+      <h1 class="ui dividing header">closest()</h1>
+      <div>
+        <ul style="border:1px solid grey">
+          <ul>
+            <p>
+              <span class="cerca">Hola</span>
+            </p>
+          </ul>
+        </ul>
+      </div>
+      <!-- siblings() -->
+      <h1 class="ui dividing header">siblings()</h1>
+      <div>
+        <p>Hola que tal</p>
+        <p>Hola como estas</p>
+        <p class="parrafo">Hola como te sientes</p>
+        <p>Hola adios</p>
+        <p>Hola que rollo</p>
+      </div>
+      <!-- append() -->
+      <h1 class="ui dividing header">append()</h1>
+      <input type="button" name="" value="Picame para agregar lo que quieras" id="quieras">
+      <div class="agregar"></div>
+
+      <!-- prepend() -->
+      <h1 class="ui dividing header">prepend()</h1>
+      <input type="button" id="eoh" value="Agregas mas Eeeeeoooohhh">
+      <p class="eoh">Eeeoooooohhhhhh</p>
+
+      <!-- html() -->
+      <h1 class="ui dividing header">html()</h1>
+      <input type="button" value="Si me picas me enojo" id="picar">
+      <br>
+      <p id="calmar">No lo piques se va a enojar</p>
+      <!-- text() -->
+      <h1 class="ui dividing header">text()</h1>
+      <input type="button" id="cambiar" value="Cumple el sueño del parrafo cambiandolo a lo que el desea">
+      <br>
+      <p id="deseo">Cambiame a Hola Mundo!!</p>
+      <br>
+      <br>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script src="https://requenahdz.github.io/firebase/js/firebase.js"></script>
+<script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+<script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+<script type="text/javascript" src="funciones.js"></script>
+</body>
+</html>

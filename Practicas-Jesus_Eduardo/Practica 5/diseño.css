@@ -1,0 +1,158 @@
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("http://www.gifs-animados.es/wallpapers/wallpapers/espacio/wallpaper-espacio-608270.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+#mercurio{
+
+  background-image: url("https://banner2.kisspng.com/20180422/pce/kisspng-messenger-earth-mercury-planet-solar-system-mercury-5add312405ab02.5843066515244454760232.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#venus{
+
+  background-image: url("https://banner2.kisspng.com/20180609/xqe/kisspng-venus-earth-planet-solar-system-5b1b8c240dd344.0575986715285320040566.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 85px;
+  height: 85px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#tierra{
+  background-image: url("https://banner2.kisspng.com/20180525/oup/kisspng-earth-planet-5b082e77d9d595.0544405415272628398923.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 110px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#marte{
+  background-image: url("https://banner2.kisspng.com/20180328/pqq/kisspng-planet-mars-jupiter-clip-art-planets-5abb9360a2de30.0202005415222424006671.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#jupiter{
+  background-image: url("https://banner2.kisspng.com/20180403/cke/kisspng-planet-jupiter-3d-computer-graphics-solar-system-jupiter-5ac42b9501f1c8.677396031522805653008.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#saturno{
+  background-image: url("https://cdn.pixabay.com/photo/2012/04/10/17/38/saturn-26618_960_720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 160px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#urano{
+  background-image: url("https://banner2.kisspng.com/20180328/how/kisspng-earth-planet-uranus-jupiter-blue-5abb7264b72177.7650063215222339567501.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#neptuno{
+  background-image: url("https://banner2.kisspng.com/20180501/ewq/kisspng-neptune-planet-uranus-web-browser-neptune-5ae876c42ef445.9791559815251841961923.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 105px;
+  height: 105px;
+  padding: 0.5em;
+  border:1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+#sol{
+  position: absolute;
+  background-color: yellow;
+  width: 250px;
+  height: 650px;
+  left: -100px;
+  padding: 0.5em;
+  border:1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.contenedor{
+  /* border:1px solid black; */
+  width:100%;
+  height:250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-image: linear-gradient(to bottom right,#358EFA, purple);
+}
+
+#jugar{
+  width:20%;
+  height: 30px;
+  border-radius: 10%;
+
+}
+
+button{
+  width: 20%;
+ padding: 0 30px;
+ font-size: 30px;
+ font-family: 'Caveat Brush', cursive;
+ background-color: black;
+ line-height: 48px;
+ border-color: white;
+ border-width: 1px;
+ border-radius: 20px;
+ color:white;
+}

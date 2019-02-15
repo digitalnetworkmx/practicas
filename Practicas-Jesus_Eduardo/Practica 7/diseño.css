@@ -1,0 +1,293 @@
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("http://www.gifs-animados.es/wallpapers/wallpapers/espacio/wallpaper-espacio-608270.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* cursor: url("https://banner2.kisspng.com/20180205/bdw/kisspng-asteroid-belt-clip-art-asteroid-png-clipart-5a77e944307e54.3628452215178079401986.jpg"); */
+}
+
+#tiempo{
+  position: absolute;
+    top: -30px;
+    left: 1315px;
+    color: white;
+}
+
+#principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border:1px solid black; */
+  color:white;
+}
+
+#boton{
+  /* padding: 5px; */
+  width: 150px;
+  height: 35px;
+  border-radius:15px;
+  background-color: lightblue;
+  color:black;
+}
+
+#aux{
+  background-color: transparent;
+  width: 75px;
+  height: 75px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#mercurio{
+  background-image: url("https://banner2.kisspng.com/20180422/pce/kisspng-messenger-earth-mercury-planet-solar-system-mercury-5add312405ab02.5843066515244454760232.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#venus{
+  position: relative;
+  background-image: url("https://banner2.kisspng.com/20180609/xqe/kisspng-venus-earth-planet-solar-system-5b1b8c240dd344.0575986715285320040566.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 85px;
+  height: 85px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#tierra{
+  z-index: 2;
+  background-image: url("https://banner2.kisspng.com/20180525/oup/kisspng-earth-planet-5b082e77d9d595.0544405415272628398923.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 110px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+}
+
+#marte{
+  z-index: 2;
+  background-image: url("https://banner2.kisspng.com/20180328/pqq/kisspng-planet-mars-jupiter-clip-art-planets-5abb9360a2de30.0202005415222424006671.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#jupiter{
+  z-index: 2;
+  background-image: url("https://banner2.kisspng.com/20180403/cke/kisspng-planet-jupiter-3d-computer-graphics-solar-system-jupiter-5ac42b9501f1c8.677396031522805653008.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#saturno{
+  z-index: 2;
+  background-image: url("https://cdn.pixabay.com/photo/2012/04/10/17/38/saturn-26618_960_720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 150px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#urano{
+  z-index: 2;
+  background-image: url("https://banner2.kisspng.com/20180328/how/kisspng-earth-planet-uranus-jupiter-blue-5abb7264b72177.7650063215222339567501.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#neptuno{
+  z-index: 2;
+  background-image: url("https://banner2.kisspng.com/20180501/ewq/kisspng-neptune-planet-uranus-web-browser-neptune-5ae876c42ef445.9791559815251841961923.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 105px;
+  height: 105px;
+  padding: 0.5em;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+#sol{
+  position: absolute;
+  background-color: yellow;
+  width: 650px;
+  height: 650px;
+  left: -550px;
+  padding: 0.5em;
+  border:1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: url("https://banner2.kisspng.com/20180605/ihl/kisspng-sunspot-nuclear-fusion-solar-cycle-chromosphere-sun-planet-5b16243d582e91.2877502015281777253612.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#orbitaMercurio{
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+  background-color: transparent;
+  border: 1px solid white;
+  left: -635px;
+}
+
+#orbitaVenus{
+  z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    width: 800px;
+    height: 820px;
+    background-color: transparent;
+    border: 1px solid white;
+    left: -520px;
+}
+
+#orbitaTierra{
+  z-index: 1;
+      position: absolute;
+      border-radius: 50%;
+      width: 800px;
+      height: 820px;
+      background-color: transparent;
+      border: 1px solid white;
+      left: -385px;
+}
+
+#orbitaMarte{
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  width: 840px;
+  height: 855px;
+  background-color: transparent;
+  border: 1px solid white;
+  left: -290px;
+}
+
+#orbitaJupiter{
+  z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    width: 850px;
+    height: 1045px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    left: -135px;
+}
+
+#orbitaSaturno{
+  z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    width: 1100px;
+    height: 1350px;
+    background-color: transparent;
+    border: 1px solid white;
+    left: -150px;
+}
+
+#orbitaUrano{
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  width: 1300px;
+  height: 1500px;
+  background-color: transparent;
+  border: 1px solid white;
+  left: -150px;
+}
+
+#orbitaNeptuno{
+  z-index: 1;
+      position: absolute;
+      border-radius: 50%;
+      width: 1500px;
+      height: 1600px;
+      background-color: transparent;
+      border: 1px solid white;
+      left: -220px;
+}
+
+.contenedor{
+  width:100%;
+  height:250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

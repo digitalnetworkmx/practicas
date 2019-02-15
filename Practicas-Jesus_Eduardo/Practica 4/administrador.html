@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="diseño.css"> -->
+</head>
+<body>
+  <style media="screen">
+    body{
+    background-image: linear-gradient(to bottom right,#358EFA, purple);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    }
+  </style>
+  <div class="ui container">
+    <br>
+    <h1 class="ui dividing header">Preguntas y respuestas</h1>
+    <div class="ui grid">
+      <div class="four wide column"></div>
+      <div class="four wide column"></div>
+      <div class="four wide column"></div>
+      <div class="four wide column">
+        <button class="ui  labeled icon button blue right" id="pregunta">
+          <i class="user icon"></i>
+          Configuracion de preguntas
+        </button>
+      </div>
+    </div>
+
+    <table class="ui celled table" id="tabla">
+      <thead>
+        <tr class="center aligned">
+          <th>N°</th>
+          <th>Pregunta</th>
+          <th>Respuesta correcta</th>
+          <th>Respuesta 1</th>
+          <th>Respuesta 2</th>
+          <th>Respuesta 3</th>
+          <th>Creada</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="center aligned" >
+      </tbody>
+    </table>
+
+    <div class="ui modal small" id="modalEditar" data-accion="">
+      <div class="header">
+        Editar Pregunta
+      </div>
+      <div class="content">
+        <div class="ui compact red message mini">Los campos marcados con *(asteristico) son obligatorios</div>
+        <form class="ui tiny form" action="index.html" method="post" id="formPregunta">
+          <div class="two fields">
+            <div class="field required">
+              <label>Pregunta</label>
+              <input class="informacion" type="text" name="pregunta" id="xdddd" placeholder="Escribe la pregunta">
+            </div>
+            <div class="field">
+              <label>Respuesta Correcta <span style="color:red;">*</span></label>
+              <input class="informacion" type="text" name="respuestaC" id="respuestaC" placeholder="Escribe la respuesta correcta">
+            </div>
+          </div>
+          <div class="field ">
+            <label>Respuesta 1 <span style="color:red;">*</span></label>
+            <input class="informacion" type="text" name="respuesta1" id="respuesta1" placeholder="Escribe una respuesta incorrecta">
+          </div>
+          <div class="field">
+            <label>Respuesta 2 <span style="color:red;">*</span></label>
+            <input class="informacion" type="text" name="respuesta2" id="respuesta2" placeholder="Escribe una respuesta incorrecta">
+          </div>
+          <div class="field">
+            <label>Respuesta 3 <span style="color:red;">*</span></label>
+            <input class="informacion" type="text" name="respuesta3" id="respuesta3" placeholder="Escribe una respuesta incorrecta">
+          </div>
+        </form>
+      </div>
+
+      <div class="actions">
+        <div class="ui green labeled icon button" id="btnGuardar">
+          <i class="save icon"></i>
+          Guardar
+        </div>
+        <button class="ui labeled icon button negative">
+          <i class="times icon"></i>
+          Cancelar
+        </button>
+      </div>
+    </div>
+
+    <div class="ui modal" id="modalagregar">
+      <div class="ui header">
+        <h3>Añadir pregunta</h3>
+        <div class="ui left aligned grid">
+          <div class="left floated aligned column">
+            <div class="ui segment">
+              <div class="ui compact red message">Los campos marcados con*(Asterisco) son obligatorios</div>
+              <form class="ui form" id="formulario">
+                <div class="field">
+                  <label>Pregunta <span style="color:red;">*</span></label>
+                  <input type="text" name="newPregunta" id="newPregunta" placeholder="Escribe la nueva pregunta">
+                </div>
+                <div class="four fields">
+                  <div class="field">
+                    <label>Respuesta Correcta <span style="color:red;">*</span></label>
+                    <input type="text" name="newRespuestaC" id="newRespuestaC" placeholder="Escribe la respuesta correcta">
+                  </div>
+                  <div class="field">
+                    <label>Respuesta 1 <span style="color:red;">*</span></label>
+                    <input type="text" name="newRespuesta1" id="newRespuesta1" placeholder="Escribe una repsuesta incorrecta">
+                  </div>
+                  <div class="field">
+                    <label>Respuesta 2 <span style="color:red;">*</span></label>
+                    <input type="text" name="newRespuesta2" id="newRespuesta2" placeholder="Escribe una repsuesta incorrecta">
+                  </div>
+                  <div class="field">
+                    <label>Respuesta 3 <span style="color:red;">*</span></label>
+                    <input type="text" name="newRespuesta3" id="newRespuesta3" placeholder="Escribe una repsuesta incorrecta">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="ui compact labeled icon button green" id="enviar"><i class="save icon"></i>Guardar</button>
+        <button class="ui compact labeled icon button red" id="cancelar"><i class="close icon"></i>Cancelar</button>
+      </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script src="https://requenahdz.github.io/firebase/js/firebase.js"></script>
+<script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+<script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+<script type="text/javascript" src="funciones.js"></script>
+
+</body>
+</html>

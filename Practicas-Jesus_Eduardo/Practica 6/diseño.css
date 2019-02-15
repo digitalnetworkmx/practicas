@@ -1,0 +1,128 @@
+body{
+  background-image: url("https://cdn.elgrupoinformatico.com/Manuales/2015/06/fondo-de-pantalla-windows-10-no-oficial-1-290615.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:0;
+
+
+}
+
+.contenedor{
+  width: 100%;
+  height: 605px;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  align-items:flex-start;
+  flex-direction:column;
+
+}
+
+#draggable {
+  width: 138px;
+  height: 180px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+}
+
+#droppable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  height: 180px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+  /* border:1px solid red; */
+}
+
+.imagenPapelera{
+  background-image: url("https://vignette.wikia.nocookie.net/inciclopedia/images/4/40/Papelera_de_reciclaje.png/revision/latest?cb=20111125155829");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:80px;
+  height:80px;
+  /* border:1px solid white; */
+}
+
+.informacion{
+  /* border:1px solid yellow; */
+  /* padding: 0; */
+  font-size: 15px;
+  /* width: 100%; */
+  /* height: 30px; */
+  /* margin-top: 5px; */
+text-align: center;
+}
+
+#carpeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  height: 180px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+  /* border:1px solid red; */
+}
+
+.imagenCarpeta{
+  background-image: url("http://technodyan.com/wp-content/uploads/2013/09/Folder.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:80px;
+  height:80px;
+  /* border:1px solid white; */
+}
+
+.informacionCarpeta{
+  /* border:1px solid yellow; */
+  /* padding: 0; */
+  font-size: 15px;
+  /* width: 100%; */
+  /* height: 30px; */
+  /* margin-top: 5px; */
+text-align: center;
+}
+
+#doc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  height: 180px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+  /* border:1px solid red; */
+}
+
+.imagenDoc{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/MS_word_DOC_icon.svg/1047px-MS_word_DOC_icon.svg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:80px;
+  height:80px;
+  /* border:1px solid white; */
+}
+
+.informacionDoc{
+  /* border:1px solid yellow; */
+  /* padding: 0; */
+  font-size: 15px;
+  /* width: 100%; */
+  /* height: 30px; */
+  /* margin-top: 5px; */
+text-align: center;
+}
