@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="quienquieresermillonario.css">
+  <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+  <script src="Usuario.js"></script>
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+</head>
+<body>
+  <div class="ui modal" id="modal">
+     <div class="content">
+       <div class="ui active dimmer">
+         <div class="ui text massive loader">Loading</div>
+       </div>
+     </div>
+   </div>
+  <div class="imagen"></div>
+  <div class="Mensaje">
+    <p>El juego ha terminado</p>
+    <p id="puntaje">Tu puntucaión es de: </p>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="ui container">
+    <div class="contenedor">
+      <div class="pregunta" id="question">
+      </div><br><br>
+      <div class="ui two column doubling stackable grid container">
+        <div class="ui button column cuadro" id="divRespuesta1">
+          <p class="inciso">A :</p>
+          <p class="respuesta" id="respuesta_1"></p>
+        </div>
+        <div class="ui button column cuadro "id="divRespuesta2">
+          <p class="inciso">B :</p>
+          <p class="respuesta" id="respuesta_2"></p>
+        </div>
+      </div><br>
+      <div id="numero">
+        0
+      </div><br>
+      <div class="ui two column doubling stackable grid container">
+        <div class="ui button column cuadro" id="divRespuesta3">
+          <p class="inciso">C :</p>
+          <p class="respuesta" id="respuesta_3"></p>
+        </div>
+        <div class="ui button column cuadro" id="divRespuesta4" >
+          <p class="inciso">D :</p>
+          <p class="respuesta" id="respuesta_4"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
