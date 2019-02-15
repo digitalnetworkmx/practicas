@@ -141,7 +141,7 @@ var Controlador=function(){
     correcta = formatear(correcta);
     $("#cargando").modal("show");
     $.ajax({
-      url:"https://borregodev.swi.mx/some/preguntas_save",
+      url:"//gabydev.swi.mx/some/preguntas_save",
       data:{"created_at":fecha,"updated_at":fecha,"pregunta":pregunta,"respuesta_1":respuesta1,"respuesta_2":respuesta2,"respuesta_3":respuesta3,"respuesta_correcta":correcta,"activo":1},
       type:"GET",
       dataType:"json"
@@ -158,7 +158,7 @@ var Controlador=function(){
   var borrarPregunta = function(id){
     $("#cargando").modal("show");
     $.ajax({
-      url:"https://borregodev.swi.mx/some/preguntas_delete",
+      url:"//gabydev.swi.mx/some/preguntas_delete",
       data:{"id":id},
       type:"GET",
       dataType:"json",
@@ -177,7 +177,7 @@ var Controlador=function(){
   var actualizarPregunta = function(id,pregunta,respuesta1,respuesta2,respuesta3,correcta,fecha){
     $("#cargando").modal("show");
     $.ajax({
-      url:"https://borregodev.swi.mx/some/preguntas_save",
+      url:"//gabydev.swi.mx/some/preguntas_save",
       data:{"updated_at":fecha,"id":id,"fecha":fecha,"pregunta":pregunta,"respuesta_1":respuesta1,"respuesta_2":respuesta2,"respuesta_3":respuesta3,"respuesta_correcta":correcta,"activo":1},
       type:"GET",
       dataType:"json",
@@ -193,7 +193,7 @@ var Controlador=function(){
   }
   var verPreguntas = function(){
     $.ajax({
-      url:"https://borregodev.swi.mx/some/preguntas_list",
+      url:"//gabydev.swi.mx/some/preguntas_list",
       type:"GET",
       dataType:"json"
     })
