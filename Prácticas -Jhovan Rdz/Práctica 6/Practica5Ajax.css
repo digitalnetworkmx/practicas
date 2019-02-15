@@ -1,0 +1,41 @@
+*{
+  background-color: pink;
+}
+
+h1{
+  text-align: center;
+}
+
+.vaca{
+  width: 100px;
+  height: 100px;
+  background-image:url("http://www.stickpng.com/assets/images/585e5b85cb11b227491c33df.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.establo{
+  width: 200px;
+  height: 180px;
+  background-image: url(https://http2.mlstatic.com/granja-lechera-a-esc-164-establo-vacas-comederos-corrales-D_NQ_NP_542511-MLM20569933779_012016-F.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 700px;
+}
+
+.imagen{
+  width: 200px;
+  height: 200px;
+  background-image: url(https://img.elcomercio.pe/files/ec_article_multimedia_gallery/uploads/2017/06/10/593c2e3ef139e.jpeg);
+  background-size: contain;
+  background-repeat:no-repeat;
+  margin-left: 100px;
+}
+
+.contenido{
+  display: none;
+}
+.contenido h5{
+  margin-left: 100px;
+}

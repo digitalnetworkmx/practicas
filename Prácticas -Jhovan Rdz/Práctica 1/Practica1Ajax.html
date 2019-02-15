@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Practica 1</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+<link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+<script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+<script src="Practica1Ajax.js"></script>
+<body><br><br><br>
+  <div class="ui container">
+    <!-- <div class="ui basic modal">
+  <div class="content">
+    <div class="ui active dimmer">
+      <div class="ui active massive loader">Buscando....</div>
+    </div>
+  </div>
+</div> -->
+    <h3>Dirección</h3>
+    <br><br>
+    <form class="ui form" id="formulario">
+      <div class="field required">
+        <label>Código Postal:</label>
+        <div class="ui labeled input">
+          <input type="text" placeholder="Ej.87087" id="codigo">
+          <div class="ui button green" id="buscar" >Buscar</div>
+        </div>
+      </div>
+      <div class="field required">
+        <label>Estado</label>
+        <div class="ui disabled input">
+          <input type="text" name="Estado" value="" placeholder="Estado" id="Estado">
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field required">
+          <label>Municipio</label>
+          <div class="ui disabled input">
+            <input type="text" name="Pais" value="" placeholder="Municipio" id="municipio">
+          </div>
+        </div>
+        <div class="field required">
+          <label>Colonia</label>
+          <select class="ui dropdown" id="colonia">
+            <option value="">Colonia</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <br><br>
+    <button class="ui labeled icon button green" id="btnGuardar">
+      <i class="save icon"></i>
+      Guardar
+    </button>
+
+<div class="ui modal" id="modal">
+     <div class="content">
+       <div class="ui active dimmer">
+         <div class="ui active massive loader">Buscando....</div>
+       </div>
+     </div>
+   </div>
+  </div>
+
+</body>
+</html>

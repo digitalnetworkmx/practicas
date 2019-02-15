@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+  <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="PracticasAjax.css">
+  <script src="Practica3Ajax.js"></script>
+</head>
+<style>
+  #lista{
+    list-decoration:none;
+  }
+
+  .familiar{
+    margin:10px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+  }
+  .pariente{
+    margin:10px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+
+</style>
+<body>
+  <div class="ui container">
+    <br><br>
+    <h3>Practica 3</h3><br><br>
+    <h5>children();</h5>
+    <ul class="ui list">
+      <li>Gaining Access</li>
+      <li>Inviting Friends</li>
+      <li>Benefits
+        <ul>
+          <li>Use Anywhere</li>
+          <li>Rebates</li>
+          <li>Discounts</li>
+        </ul>
+      </li>
+      <li>Warranty</li>
+    </ul>
+    <div class="ui button green" id="Boton1">
+      Ver Hijos xd
+    </div>
+    <div class="ui horizontal divider">Buscas Este?</div><br>
+    <h5>find();</h5>
+    <ul class="ui list" id="lista">
+      <li>Gaining Access</li>
+      <li>Inviting Friends</li>
+      <li>Benefits
+        <ul>
+          <li>Use Anywhere</li>
+          <span>Estoy escondiddo</span>
+          <li>Rebates</li>
+          <li>Discounts</li>
+        </ul>
+      </li>
+      <li>Warranty</li>
+    </ul>
+    <div class="ui button green" id="Boton2">
+      Ver El escodido xd
+    </div>
+    <div class="ui horizontal divider">Buscas Este?</div><br>
+    <h5>parent();</h5>
+    <div class="familiar"><p>Hola</p>
+    </div>
+    <div class="pariente">
+      <p>Hola soy el pariente xd</p>
+    </div><br>
+    <div class="ui button green" id="Boton3">Ver pariente xd</div>
+    <div class="ui horizontal divider">Buscas Este?</div><br>
+    <h5>parents();</h5>
+    <div class="padre"><br>
+      <div class="hijos"></div>
+      <div class="hijos"></div>
+      <div class="hijo"></div>
+    </div><br>
+
+    <div class="ui button green" id="Boton4">
+     Mira las parientes xd
+   </div><br>
+   <div class="ui horizontal divider">Buscas Este?</div><br>
+   <h5>closest</h5><br>
+   <ul class="ui list">
+     <li>Gaining Access</li>
+     <li>Inviting Friends</li>
+     <li>Benefits
+       <ul>
+         <li>Use Anywhere</li>
+         <li>Rebates</li>
+         <span>Hola A todos</span>
+         <li>Discounts</li>
+       </ul>
+     </li>
+     <li>Warranty</li>
+   </ul><br>
+   <div class="ui button green" id="Boton5">Encerrado xd</div><br>
+   <div class="ui horizontal divider">Buscas Este?</div><br>
+   <h5>siblings();</h5><br>
+   <ul class="ui list">
+     <li>Gaining Access</li>
+     <li class="hola">Inviting Friends</li>
+     <li>Benefits
+       <ul>
+         <li class="hola">Use Anywhere</li>
+         <li>Rebates</li>
+         <li class="hola">Discounts</li>
+       </ul>
+     </li>
+     <li>Warranty</li>
+   </ul><br>
+   <div class="ui button green" id="Boton6">Mira los no seleccionados</div><br>
+    <div class="ui horizontal divider">Buscas Este?</div><br>
+    <h5>append();</h5><br>
+    <div class="padre2"></div><br>
+    <div class="ui button green" id="Boton7">Mira como pongo un hijo xd</div><br>
+    <div class="ui horizontal divider">Buscas Este?</div><br>
+    <h5>prepend();</h5><br>
+    <div class="padre3">
+      <p class="mensaje">Soy el papá</p>
+    </div><br>
+    <div class="ui button green" id="Boton8">Mira el mensaje</div><br>
+    <div class="ui horizontal divider">Buscas Este?</div><br>
+    <h5>.html</h5><br>
+    <div class="padre3">
+      <p class="mensaje2">Aquí dice una cosa</p>
+    </div><br>
+      <div class="ui button green" id="Boton9">Mira como cambia la cosa xd</div><br>
+      <div class="ui horizontal divider">Buscas Este?</div><br>
+      <h5>.text();</h5><br>
+      <div class="padre3">
+        <p class="mensaje3">Aquí dice una cosa</p>
+      </div><br>
+      <div class="ui button green" id="Boton10">Mira como cambia la cosa shaval xd</div><br>
+        <div class="ui horizontal divider">Aquí se acaba shvalon xd</div><br>
+  </div>
+</body>
+</html>

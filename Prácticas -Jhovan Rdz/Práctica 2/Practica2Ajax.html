@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    .gifs{
+      width:100%;
+      min-height:500px;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+  <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+  <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+  <script src="Practica2Ajax.js"></script>
+  <body>
+    <div class="ui container">
+      <br><br>
+      <h3>Buscador de Gif´s</h3><br>
+      <form class="ui form">
+  <div class="field">
+    <div class="ui labeled input">
+      <input type="text" name="buscador" placeholder="Buscador...." id="buscador">
+      <div class="ui button green" id="buscar"><i class="search icon"></i></div>
+    </div>
+  </div>
+</form>
+    <br>
+    <div class="gifs" id="contenedor">
+
+    </div>
+    </div>
+  </body>
+</html>
