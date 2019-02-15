@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="comosermillonario.js"></script>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="ui modal" id="cargando">
+      <div class="content">
+        <div class="ui active dimmer">
+          <div class="ui text massive loader">Loading</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui basic modal">
+      <div class="ui icon header">
+        <i class="exclamation yellow icon"></i>
+        <p id="borrado">¿Seguro que desea borrar este regitro?</p>
+      </div>
+      <div class="content" id="mensaje2">No se podra volver a recuperar tal dato</div>
+      <div class="actions">
+        <div class="ui red basic cancel inverted button">
+          <i class="remove icon"></i>
+          No
+        </div>
+        <div id="btnBorrar" class="ui green ok inverted button">
+          <i class="checkmark icon"></i>
+          Si
+        </div>
+      </div>
+    </div>
+    <div class="ui modal" id="modalAgregar">
+      <i class="close icon"></i>
+      <div class="header">Nueva Pregunta</div>
+      <div class="content">
+        <div class="ui red compact message">Los campos marcados con asterisco(*) son obligatorios</div>
+        <form class="ui form" id="formNuevo">
+          <div class="field required">
+            <label for="">Pregunta</label>
+            <input type="text" autocomplete="off" id="pregunta"  name="pregunta" placeholder="Ingresa una repuesta en este campo" placeholder="¿De que color es el caballo blanco de napoleon?">
+          </div>
+          <div class="two fields">
+            <div class="field required">
+              <label for="">Respuesta correcta</label>
+              <input type="text" name="respuesta_correcta" placeholder="Ingresa la respuesta correcta aqui" autocomplete="off" id="respuesta_correcta">
+            </div>
+            <div class="field required">
+              <label for="">Respuesta 1</label>
+              <input type="text" name="respuesta_1" placeholder="Ingresa una repuesta en este campo" id="respuesta_1" autocomplete="off">
+            </div>
+          </div>
+          <div class="two fields">
+            <div class="field required">
+              <label for="">Respuesta 2</label>
+              <input type="text"  name="respuesta_2" placeholder="Ingresa una repuesta en este campo" autocomplete="off" id="respuesta_2">
+            </div>
+            <div class="field required">
+              <label for="">Respuesta 3</label>
+              <input type="text" id="respuesta_3" name="respuesta_3" placeholder="Ingresa una repuesta en este campo" autocomplete="off" >
+            </div>
+          </div>
+          <div class="actions">
+            <div class="ui cancel red labeled icon button">
+              <i class="cancel icon"></i> Cancelar
+            </div>
+            <div class="ui acept green labeled right floated icon button" id="btnGuardar"><i class="save icon"></i>Guardar</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <header class="ui container">
+      <h1 class="ui header">Administracion</h1>
+      <div class="ui breadcrumb">
+        <a href="#" class="section">Inicio</a>
+        <i class="right angle icon divider"></i>
+        <div class="active section">Administrador</div>
+      </div>
+      <div class="ui button labeled right floated icon blue" id="btnNuevo">
+        <i class="plus icon"></i> Agregar
+      </div>
+    </header>
+    <br/>
+    <br>
+    <section class="ui container seccion1">
+      <table id="preguntas" class="ui striped aligned center table">
+        <thead>
+            <tr>
+              <th>Pregunta</th>
+              <th>Respuesta correcta</th>
+              <th>Respuesta 1</th>
+              <th>Respuesta 2</th>
+              <th>Respuesta 3</th>
+              <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
