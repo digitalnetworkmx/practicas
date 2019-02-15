@@ -20,6 +20,7 @@ var cuerpo =function () {
   imagen+='<div class="generar"></div>';
   imagen+='<div class="steve"></div>';
   imagen+='<div class="cesto"></div>';
+  imagen+='<div class="ui button red" id="borrar">Borrar Todo</div>'
   imagen+='<div class="botones">';
   imagen+='<div class="madera">';
   imagen+='<h4>Madera</h4>';
@@ -99,6 +100,18 @@ var acciones=function () {
     $(document).on('click','#boton9',function () {
       $('.generar').append(hojas);
       $('.Bhojas').draggable();
+    });
+
+
+    $(document).on('click','#borrar',function () {
+      $('.Bmadera').css("display","none");
+      $('.Bpierdra').css("display","none");
+      $('.Broca').css("display","none");
+      $('.Blana').css("display","none");
+      $('.Bladrillo').css("display","none");
+      $('.Bluminosa').css("display","none");
+      $('.Bpuerta').css("display","none");
+      $('.Bhojas').css("display","none");
     });
 
 }

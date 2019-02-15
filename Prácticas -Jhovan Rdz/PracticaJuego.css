@@ -16,6 +16,12 @@ background-repeat:no-repeat;
 *{
   margin: 0px;
 }
+#borrar{
+  position: absolute;
+  margin-left: 800px;
+  margin-top: 48px;
+}
+
 .steve{
   width: 100px;
   height: 200px;
