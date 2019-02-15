@@ -1,0 +1,81 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+.prin{
+  width:100%;
+  height: 100%;
+  background-image:url("http://www.fondox.net/descargar.php?id=2002&resolucion=1280x800");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 50px;
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  border-radius: 20%;
+}
+.contenedor{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  background-color: pink;
+  background-image: url("http://www.fondox.net/descargar.php?id=2002&resolucion=1280x800");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.contenedor .pers{
+  float: left;
+  width: 30%;
+  height: 25%;
+  position: relative;
+  cursor: pointer;
+}
+
+.contenedor .pers .hueco{
+  background-image: url("https://images.vexels.com/media/users/3/145639/isolated/preview/361f9b4351e4598141377cf83f77e46d-piedra-de-la-tierra-by-vexels.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  background-position: bottom center;
+  width: 150px;
+  height: 150px;
+}
+.hea{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contenedor .pers .topo{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 0;
+  background-image: url("https://vignette.wikia.nocookie.net/po-ke-mon/images/8/8b/Dugtrio.png/revision/latest?cb=20131106211301&path-prefix=es");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom center;
+  transition: all.5s;
+}
+
+.contenedor .pers.salta .topo{
+  height: 150px;
+}

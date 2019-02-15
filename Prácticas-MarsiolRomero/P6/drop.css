@@ -1,0 +1,156 @@
+
+.dibujo{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  border: 1px black solid;
+}
+
+.paletaColores{
+  width: 90px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: blue; */
+}
+.colorRosa{
+   width: 80px;
+    height: 80px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0;
+    background-color: pink;
+  }
+
+  .colorVerde{
+    width: 80px;
+     height: 80px;
+     padding: 0.5em;
+     float: left;
+     margin: 10px 10px 10px 0;
+    background-color: #429F33;
+    }
+
+    .colorAzul{
+      width: 80px;
+       height: 80px;
+       padding: 0.5em;
+       float: left;
+       margin: 10px 10px 10px 0;
+      background-color: #6FCED1;
+      }
+
+      .colorCafe{
+        width: 80px;
+         height: 80px;
+         padding: 0.5em;
+         float: left;
+         margin: 10px 10px 10px 0;
+        background-color: #9F5433;
+        }
+
+.colorMorado{
+  width: 80px;
+   height: 80px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px 10px 10px 0;
+  background-color: #B06FD1;
+  }
+
+  .colorVerdeBajo{
+    width: 80px;
+     height: 80px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0;
+    background-color: #6FD175;
+    }
+
+  .dibujOO{
+    border:1px black solid;
+    margin: 10px;
+    /* background-color: blue; */
+    position: relative;
+    width: 600px;
+    height: 400px;
+  }
+
+#droppable {
+position: absolute;
+bottom: 90px;
+left: 50px;
+width: 250px;
+height: 100px;
+border:1px black solid;
+}
+
+#droppable1 {
+position: absolute;
+width: 600px;
+height: 400px;
+border:1px black solid;
+/* background-color: blue; */
+border:1px black solid;
+}
+
+#droppable2{
+  position: absolute;
+  top: 110px;
+  width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid ;
+    border-color: black solid;
+}
+
+#droppable3{
+  position: absolute;
+  bottom: 0;
+  width: 600px;
+  height: 90px;
+  border:1px black solid;
+}
+
+#droppable4{
+  position: absolute;
+  bottom: 90px;
+  left: 430px;
+  width: 100px;
+  height: 150px;
+  border:1px black solid;
+}
+
+#droppable5{
+  position: absolute;
+  bottom: 200px;
+  left: 400px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px black solid;
+
+}
+
+.colorRosaD{
+background-color: pink;
+}
+.colorCieloD{
+background-color: #6FCED1;
+}
+.colorVerdeD{
+background-color: #429F33;
+}
+.colorCafeD{
+background-color: #9F5433;
+}
+.colorMoradoD{
+background-color:  #B06FD1;
+}
+.colorVerdeBajoD{
+  background-color: #6FD175;
+}

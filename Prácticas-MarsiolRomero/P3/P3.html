@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+   <script src="P3.js"></script>
+  </head>
+  <body>
+    <style media="screen">
+      .contenedor{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:pink;
+        width: 100%;
+        height: 300px
+      }
+
+
+      #im1{
+        width: 300px;
+        height: 250px;
+      }
+
+      #im2{
+        width: 300px;
+        height: 250px;
+      }
+
+      #im3{
+        width: 100px;
+        height: 150px;
+      }
+
+      .con1{
+        background-color:pink;
+        width:100%;
+        height:50px;
+      }
+
+      .con2{
+        background-color:pink;
+        width:100%;
+        height:50px;
+      }
+
+      .con3{
+        background-color:pink;
+        width:100%;
+        height:50px;
+      }
+
+    </style>
+    <div class="ui container">
+      <p><br><br></p>
+        <h1 class="ui dividing header">children();</h1>
+        <p>Click en la imagen</p>
+        <div class="contenedor">
+          <div class="contenedor2">
+            <div class="imagen">
+              <img id="im1" src="https://los40es00.epimg.net/los40/imagenes/2018/05/24/album/1527162554_573298_1527170652_noticia_normal.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+          <h1 class="ui dividing header">find();</h1>
+          <button id="find" type="button" name="button">Encontrar div2</button>
+          <br><br>
+          <div class="divs">
+            <div class="con1">
+            </div>
+            <div class="con2">
+            </div>
+            <div class="con3">
+            </div>
+          </div>
+        <h1 class="ui dividing header">parent();</h1>
+        <p>Click en el div morado</p>
+        <div class="content1" style="width: 100%; height: 150px; background-color:pink; display:flex; justify-content:center; align-items:center">
+          <div id ="paren" class="content2" style="width:700%; height: 90px; background-color:#DE9EE6;">
+          </div>
+        </div>
+
+        <h1 class="ui dividing header">parents();</h1>
+        <p>Click en la imagen</p>
+        <div class="contenedor">
+          <div class="contenedor2">
+            <div class="imagen">
+              <img id="im2" src="https://los40es00.epimg.net/los40/imagenes/2018/05/24/album/1527162554_573298_1527170652_noticia_normal.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <h1 class="ui dividing header">closest();</h1>
+        <p>Click en el div amarillo</p>
+        <div class="contClos" style="width: 100%; height: 250px; background-color:#DE9EE6; display:flex; justify-content:center; align-items:center">
+          <div class="contClos2"  style="width: 80%; height: 200px; background-color:pink; display:flex; justify-content:center; align-items:center" >
+            <div id="cols" class="contClos3" style="width: 60%; height: 150px; background-color:#ECE6A3;" >
+            </div>
+          </div>
+        </div>
+
+        <h1 class="ui dividing header">siblings();</h1>
+        <button id="sibl" type="button" name="button">xdxd</button>
+        <br><br>
+        <div class="sib" style="width: 100%; height: 200px; background-color:pink; display:flex; flex-direction: column; justify-content:bewteen-around; align-items:center">
+          <div  style="width: 90%; height: 50px; background-color:#ECE6A3; margin: 10px;">
+          </div>
+          <div class="sib2" style="width: 90%; height: 50px; background-color:#ECE6A3; margin: 10px;">
+          </div>
+          <div style="width: 90%; height: 50px; background-color:#ECE6A3; margin: 10px;" >
+          </div>
+        </div>
+
+        <h1>append();</h1>
+    <button id="boton" type="button" name="button">Append Mundo</button>
+    <br> <br>
+    <div class="apeend">Hola</div>
+
+    <h1>prepend();</h1>
+    <button id="boton2"type="button" name="button">Prepend Hola</button>
+    <br><br>
+    <div class="prendd">Mundo</div>
+
+    <h1>html();</h1>
+    <button id="boton3" type="button" name="button">HTML</button>
+    <br><br>
+    <div class="htmml">Hola Mundo xd</div>
+
+    <h1>.text();</h1>
+    <button id="boton4" type="button" name="button">Text</button>
+    <br><br>
+    <div class="textt">Holaaa</div>
+
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="https://requenahdz.github.io/firebase/js/firebase.js"></script>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+  </body>
+</html>
