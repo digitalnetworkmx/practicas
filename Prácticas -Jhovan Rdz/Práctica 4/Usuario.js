@@ -119,7 +119,7 @@ var Preguntas = function(){
   var obtenerPreguntas = function(){
     $("#modal").modal("show");
     $.ajax({
-      url:"http://gabydev.swi.mx/some/preguntas_list",
+      url:"https://borregodev.swi.mx/some/preguntas_list",
       type:"GET",
       dataType:"json"
     })
