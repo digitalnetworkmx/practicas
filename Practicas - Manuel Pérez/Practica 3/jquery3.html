@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="jquery3.js"></script>
+    <link rel="stylesheet" href="jquery3.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <section class="seccion1 ui container">
+      Este es un ejemplo con Children();
+      <ol class="ui list" id="opcion1">
+        <li value="+">Soy un padre</li>
+        <li value="+">Soy un padre</li>
+        <li value="+">Soy un padre con hijos
+          <ol>
+            <li value="-">Cosa 1</li>
+            <li value="-">Cosa 2</li>
+            <li value="-">Cosa 3</li>
+          </ol>
+        </li>
+        <li value="+">Soy un padre</li>
+      </ol>
+      <div class="ui labeled green button icon" id="button1">
+        <i class="eye icon"></i> Ver children()
+      </div>
+    </section>
+    <section class="seccion2 ui container">
+      <ol class="ui list" id="opcion2">
+        <li value="+" class="ladron">Soy un padre</li>
+        <li value="+">Soy un padre</li>
+        <li value="+" class="ladron">Soy un padre con hijos</li>
+        <li value="+">Soy un padre</li>
+      </ol>
+      <div class="ui labeled green button icon" id="button2">
+        <i class="eye icon"></i> Ver Find();
+      </div>
+    </section>
+    <section class="seccion3 ui container">
+      Este es un ejemplo con parent();
+      <ol class="ui list">
+        <li value="+">Soy un padre</li>
+        <li value="+">Soy un padre</li>
+        <li value="+">Soy un padre con hijos
+          <ol id="opcion3">
+            <li value="-">Cosa 1</li>
+            <li value="-">Cosa 2</li>
+            <li value="-">Cosa 3</li>
+          </ol></li>
+        <li value="+">Soy un padre</li>
+      </ol>
+      <div class="ui labeled green button icon" id="button3">
+        <i class="eye icon"></i> Ver parent();
+      </div>
+    </section>
+    <section class="seccion4 ui container">
+      <div class="caja padre">
+        <div class="caja hijo"></div>
+        <div class="caja hijo"></div>
+        <div class="caja hijo" id="opcion4"></div>
+        <div class="caja hijo"></div>
+      </div>
+      <div class="ui labeled green button icon" id="button4">
+        <i class="eye icon"></i> Ver parents();
+      </div>
+    </section>
+    <section class="seccion4 ui container">
+      <div class="caja padre">
+        <div class="caja hijo"></div>
+        <div class="caja hijo"></div>
+        <div class="caja hijo" style="background-color:green" id="opcion5"></div>
+        <div class="caja hijo"></div>
+      </div>
+      <div class="ui labeled green button icon" id="button5">
+        <i class="eye icon"></i> Ver closest();
+      </div>
+    </section>
+    <section class="seccion4 ui container">
+      <div class="caja padre">
+        <div class="caja hijo"></div>
+        <div class="caja hijo"></div>
+        <div class="caja hijo" style="background-color:red" id="opcion6"></div>
+        <div class="caja hijo"></div>
+        <div class="caja hijo"></div>
+      </div>
+      <div class="ui labeled green button icon" id="button6">
+        <i class="eye icon"></i> Ver siblings();
+      </div>
+    </section>
+    <section class="seccion 4 ui container">
+      <label for="">Ingresa la url de una imagen para añadirla a tu banco de imagenes:</label>
+      <input type="text" id="entrada1">
+      <div class="ui labeled green button icon" id="button7">
+        <i class="eye icon"></i> Ver append();
+      </div>
+    </section>
+    <section id="opcion7" class="ui container">
+    </section>
+    <section class="seccion4 ui container" id="opcion8">
+      <div class="button ui labeled icon green" id="button8">
+        <i class="eye icon"></i> Agregar espacios atras con prepend();
+      </div>
+    </section>
+    <section class="seccion4 ui container">
+      <label for="">Cambiar el texto de abajo</label>
+      <input type="text" id="entrada2" placeholder="Perro">
+      <div id="button9" class="ui button labeled icon green">
+        <i class="eye icon"></i> Cambiar el texto con html()
+      </div>
+      <br><p id="opcion9">Hola que tal soy el texto inicial</p>
+    </section>
+    <section class="seccion4 ui container">
+      <ol class="ui list" id="opcion10">
+        <li value="+" >Soy un padre</li>
+        <li value="+">Soy un padre
+          <ol>
+            <li value="-">Cosa 1</li>
+            <li value="-">Cosa 2</li>
+            <li value="-">Cosa 3</li>
+          </ol></li>
+        <li value="+" >Soy un padre con hijos</li>
+        <li value="+">Soy un padre</li>
+      </ol>
+      <div class="ui labeled green button icon" id="button10">
+        <i class="eye icon"></i> Ver traduccion text();
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+
+.hijo{
+  background:blue;
+  width:2em;
+  height:2em;
+  margin:.5em;
+}
+.padre{
+  display:flex;
+  flex-wrap:wrap;
+  background:black;
+}

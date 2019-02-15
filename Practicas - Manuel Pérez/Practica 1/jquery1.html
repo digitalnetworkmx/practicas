@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="jquery1.js"></script>
+  </head>
+  <body>
+    <div class="ui modal" id="modal">
+      <div class="content">
+        <div class="ui active dimmer">
+          <div class="ui text massive loader">Loading</div>
+        </div>
+      </div>
+    </div>
+    <header class="cabecera ui container"><h1 class="ui header">Direccion</h1></header>
+    <section class="seccion1 ui container">
+      <form class="ui form" id="form">
+        <div class="two fields">
+          <div class="field required">
+            <label for="">Codigo postal:</label>
+            <input type="text" name="codigoPostal" id="codigoPostal" placeholder="EJ:87030">
+          </div>
+          <div class="field required">
+            <div style="margin-top:1.65em" class="ui labeled button icon green" id="guardar">
+              <i class="search icon"></i> Buscar
+            </div>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field required">
+            <label for="">Estado:</label>
+            <input type="text" id="estado">
+          </div>
+          <div class="field required">
+            <label for="">Municipio:</label>
+            <input type="text" id="municipio">
+          </div>
+        </div>
+        <div class="field required">
+          <select name="skills" id="dropdown" class="ui fluid search dropdown">
+          </select>
+        </div>
+        <div class="field required">
+          <div style="margin-top:1.65em" class="ui labeled button icon green">
+            <i class="save icon"></i> Guardar
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

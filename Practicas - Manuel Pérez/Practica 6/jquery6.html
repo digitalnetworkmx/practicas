@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <script src="https://github.com/components/jqueryui/blob/master/jquery-ui.js"></script>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+      #diamante{
+        width:100px;
+        height:100px;
+        background-image:url(https://images.vexels.com/media/users/3/151683/isolated/preview/f2644eda9149bcfbd275460af39fc5f3-icono-plano-de-diamante-by-vexels.png);
+        background-size:contain;
+        background-position:center;
+      }
+      #caja{
+        width:150px;
+        height:150px;
+        background-image:url(https://image.flaticon.com/icons/png/512/869/869078.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:center;
+      }
+      #imagen{
+        width:400px;
+        height:400px;
+        background-image:url(https://i.ytimg.com/vi/hfsSrQmFiXA/maxresdefault.jpg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:center;
+      }
+      #contenedor{
+        display:none;
+      }
+    </style>
+    <script>
+      function inicio(){
+        $("#diamante").draggable();
+        $("#caja").droppable({
+          drop:function(event, ui){
+            $("#diamante").css("background","none");
+            $(this).css("background-image","url(https://png.pngtree.com/element_origin_min_pic/16/07/14/21578798d131d86.jpg)");
+            $("#contenedor").css("display","block");
+          }
+        });
+      }
+      window.onload=inicio;
+    </script>
+  </head>
+  <body>
+    <header class="ui container">
+      <h1 class="ui header">Roba el diamante</h1>
+    </header>
+    <section class="ui container">
+      <div id="diamante"></div>
+    </section>
+    <section class="ui container">
+      <div id="caja"></div>
+    </section>
+    <section class="ui container" id="contenedor">
+      ¡CORRE!
+      <section id="imagen"></section>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <script src="https://github.com/components/jqueryui/blob/master/jquery-ui.js"></script>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+      .drag{
+        width:100px;
+        height:100px;
+        background:transparent;
+      }
+      #cuerpo{
+        width:40px;
+        height:130px;
+        background:black;
+        margin:auto;
+      }
+      #mano1{
+        width:100px;
+        height:10px;
+        background:black;
+        margin:auto;
+      }
+      #mano2{
+        width:100px;
+        height:10px;
+        background:black;
+        margin:auto;
+      }
+      #pie1{
+        width:10px;
+        height:100px;
+        background:black;
+        margin:auto;
+      }
+      #pie2{
+        width:10px;
+        height:100px;
+        background:black;
+        margin:auto;
+      }
+      #cabeza{
+        border-radius:50%;
+        background:black;
+      }
+    </style>
+    <script>
+      function inicio(){
+        $(".drag").draggable();
+      }
+      window.onload=inicio;
+    </script>
+  </head>
+  <body>
+    <header class="ui container">
+      <h1 class="ui header">Arma el monito :D</h1>
+    </header>
+    <div class="drag" id="cabeza">
+    </div>
+    <div class="drag">
+      <div id="cuerpo">
+      </div>
+    </div>
+    <div class="drag">
+      <div id="mano1">
+
+      </div>
+    </div>
+    <div class="drag">
+      <div id="mano2">
+
+      </div>
+    </div>
+    <div class="drag">
+      <div id="pie1">
+
+      </div>
+    </div>
+    <div class="drag">
+      <div id="pie2">
+
+      </div>
+    </div>
+  </body>
+</html>

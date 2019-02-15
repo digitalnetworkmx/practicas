@@ -1,0 +1,73 @@
+#gallina{
+  width:100px;
+  height:100px;
+  background-image:url(https://images.vexels.com/media/users/3/141672/isolated/preview/251e43758b902db8a07819f850ba9d0b-gallina-de-plumas-de-animales-by-vexels.png);
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.huevo{
+  width:50px;
+  height:50px;
+  position:relative;
+  background-image:url(http://www.stickpng.com/assets/images/580b57fbd9996e24bc43c108.png);
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+body{
+  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60JxYJfhtAgTMTBIKkh_b47RvzLrT-7o2Lf7LgkdqFszs84TQnQ);
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.roto{
+  background-image:url(https://www.pediasure.es/sites/default/files/images-alimentos/_0006_Huevo.png);
+}
+.cocido{
+  background-image:url(https://pngimage.net/wp-content/uploads/2018/06/huevo-cocido-png.png);
+  width:70px;
+  height:70px;
+}
+.contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  height: 70%;
+  width:100%;
+  min-height: 10em;
+  max-height: 20em;
+}
+#canasta{
+  background-image:url(http://www.stickpng.com/assets/images/5a0595d79cf05203c4b60440.png);
+  width:160px;
+  height:160px;
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+#rostizado{
+  background-image:url(https://pngimage.net/wp-content/uploads/2018/06/pollo-rostizado-png-1.png);
+  background-position:center;
+  background-size:contain;
+  width:100px;
+  height:100px;
+  background-repeat:no-repeat;
+}
+.contenedor2{
+  display:flex;
+}
+
+.frito{
+  background-image:url(http://www.centrodesaluddeaguimes.com/index_htm_files/52660@2x.png);
+  width:60px;
+  height: 60px;
+
+}
+#sarten{
+  background-image:url(https://www.heb.com.mx/media/catalog/product/cache/20/image/d954a60aa48ef57022b0eb878e93bc1f/S/a/654456_860199996.png);
+  width:200px;
+  height:200px;
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}

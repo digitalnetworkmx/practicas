@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="jquery2.js"></script>
+    <style media="screen">
+      #resultado{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ui modal" id="modal">
+      <div class="content">
+        <div class="ui active dimmer">
+          <div class="ui active massive loader"></div>
+        </div>
+      </div>
+    </div>
+    <header class="ui container">
+      <h1 class="ui header">Buscador de gifs</h1>
+    </header>
+    <section class="seccion1 ui container">
+      <form action="" class="ui form" id="form">
+        <div class="field required">
+          <label for="">Ingrese la palabra clave del GIF</label>
+          <input type="text" id="palabra" name="palabra" placeholder="perros">
+        </div>
+        <div class="field required">
+          <div id="buscar" class="ui labeled icon green button">
+            <i class="search icon"></i> Buscar
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="ui container" style="margin:auto" id="resultado">
+
+    </section>
+  </body>
+</html>
