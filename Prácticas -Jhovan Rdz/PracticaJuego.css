@@ -1,0 +1,152 @@
+.titulo{
+  display: flex;
+  justify-content: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+.fondo{
+width: 100%;
+height: 100%;
+background-image: url(https://static.planetminecraft.com/files/resource_media/screenshot/1227/flat_2796054.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+
+}
+
+*{
+  margin: 0px;
+}
+.steve{
+  width: 100px;
+  height: 200px;
+  margin-top: -190px;
+  margin-left: 1100px;
+  background-image: url(https://happype.weebly.com/uploads/5/6/7/3/56730361/7774064_orig.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.cesto{
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  margin-left: 1000px;
+  margin-top: 80px;
+  background-image: url(https://cdn.pixabay.com/photo/2012/04/24/16/34/garbage-40357_960_720.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.generar{
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  margin-left: 10px;
+  margin-top: -10px;
+
+}
+
+.botones{
+  width: 900px;
+  min-height: 100px;
+  margin-top:10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Bmadera{
+  width: 50px;
+  height: 50px;
+  background-image: url(https://ih1.redbubble.net/image.33218762.7861/mp,550x550,matte,ffffff,t.3.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Bpiedra{
+  width: 50px;
+  height: 50px;
+  background-image: url(https://i.imgur.com/Cxhwp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Broca{
+  width: 50px;
+  height: 50px;
+  background-image: url(https://img1.minebook.me/gallery/med/1559_bg_rock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Blana{
+  width: 50px;
+  height: 50px;
+  background-image: url(https://lh3.googleusercontent.com/WHkSPuDYhrXTn_eEktSFtOJr8zYmvnA0HCoTaE5rQMKtcoqFqb6c8RAltTMVSeyBtZgLNNC0dBUhJ4DTa_WE=s400);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Bluminosa{
+  width: 50px;
+  height: 50px;
+  background-image: url(https://t4.rbxcdn.com/7c436388a01838e790ebe675f9e98044);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Bladrillo{
+  width: 50px;
+  height: 50px;
+  background-image: url(https://ih0.redbubble.net/image.258054280.4618/flat,550x550,075,f.u5.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Bpuerta{
+  width: 50px;
+  height: 100px;
+  background-image: url(https://cdn.pixabay.com/photo/2016/12/15/14/57/the-door-1909077_960_720.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.Bhojas{
+  width: 50px;
+  height: 50px;
+  background-image: url(http://3.bp.blogspot.com/-D_-9j5ViFxo/UELZGLItp5I/AAAAAAAAAnw/XevMcGKMwlw/s1600/0f5762ff139b4077f0632a247e3082c386a0185839bae1c16eec3d780d76bd824g.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.madera{
+  margin: 5px;
+}
+.piedra{
+  margin: 5px;
+}
+.ladrillo{
+  margin:5px;
+}
+.puerta{
+  margin: 5px;
+}
+
+.roca{
+  margin: 5px;
+}
+.losa{
+  margin: 5px;
+}
+.lana{
+  margin: 5px;
+}
+.luminosa{
+  margin: 5px;
+}
+.hojas{
+  margin: 5px;
+}
+.tronco{
+  margin: 5px;
+}
