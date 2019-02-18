@@ -54,7 +54,7 @@ var juego = new function(){
         }
       }
       if(comprobar){
-        piezas.eq(i).css({"background-image":"url(imagenes/"+rutaImagenes[numIm]+")","background-size":"cover"});
+        piezas.eq(i).css({"background-image":"url(https://raw.githubusercontent.com/digitalnetworkmx/practicas/master/Practicas-DanielMacias/P7/imagenes/"+rutaImagenes[numIm]+")","background-size":"cover"});
         piezas.eq(i).attr("data-id","C"+(numIm+1));
         i++;
         indexImagenes.push(numIm);
