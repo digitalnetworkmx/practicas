@@ -1,6 +1,6 @@
 var juego = new function(){
   var piezas="",piezasColocadas=0,lol=0,pzasPut=new Array();
-  var rutaImagenes = ["pieza1.png","pieza2.png","pieza3.png","pieza4.png","pieza5.png","pieza6.png","pieza7.png","pieza8.png","pieza9.png"];
+  var rutaImagenes = ["pieza1.PNG","pieza2.PNG","pieza3.PNG","pieza4.PNG","pieza5.PNG","pieza6.PNG","pieza7.PNG","pieza8.PNG","pieza9.PNG"];
 
   var init = function(){
     initTablaRompecabezas();
