@@ -51,3 +51,10 @@ select{
   border-radius: .5em;
   color:white;
 }
+select.figuras{
+  font-size:.7em;
+}
+#figuras{
+  display:flex;
+  flex-direction: column;
+}

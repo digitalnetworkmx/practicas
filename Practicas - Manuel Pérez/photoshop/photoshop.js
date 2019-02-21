@@ -349,6 +349,9 @@ function inputs(contenedor){
     capaActual.draw();
     capaActual.batchDraw();
   });
+  $("select.figuras").change(function(){
+    eval("agregar"+$(this).val()+"(contenedor)");
+  })
 }
 function imagenAcciones(){
   $(".imagen").dblclick(function(){
@@ -396,5 +399,84 @@ function btnAgregarTexto(contenedor){
     capa.add(texto);
     contenedor.add(capa);
   });
+}
+function agregarRectangulo(stage){
+  var layer = new Konva.Layer();
+
+    var rect = new Konva.Rect({
+      x: stage.getWidth() / 2,
+      y: stage.getHeight() / 2,
+      width: 100,
+      height: 50,
+      fill: 'green',
+      stroke: 'black',
+      strokeWidth: 4,
+      name:"imagen",
+      draggable:true
+    });
+    // add the shape to the layer
+    layer.add(rect);
+    // add the layer to the stage
+    stage.add(layer);
+}
+function agregarAnillo(stage){
+  var layer = new Konva.Layer();
+
+   var ring = new Konva.Ring({
+     x: stage.getWidth() / 2,
+     y: stage.getHeight() / 2,
+     innerRadius: 40,
+     outerRadius: 70,
+     fill: 'yellow',
+     name:"imagen",
+     stroke: 'black',
+     strokeWidth: 4,
+     draggable:true
+   });
+
+   // add the shape to the layer
+   layer.add(ring);
+
+   // add the layer to the stage
+   stage.add(layer);
+}
+function agregarEstrella(stage){
+  var layer = new Konva.Layer();
+
+    var star = new Konva.Star({
+      x: stage.getWidth() / 2,
+      y: stage.getHeight() / 2,
+      numPoints: 6,
+      innerRadius: 40,
+      outerRadius: 70,
+      name:"imagen",
+      fill: 'yellow',
+      stroke: 'black',
+      strokeWidth: 4,
+      draggable:true
+    });
+
+    // add the shape to the layer
+    layer.add(star);
+
+    // add the layer to the stage
+    stage.add(layer);
+}
+function agregarCirculo(stage){
+  var layer = new Konva.Layer();
+  var circle = new Konva.Circle({
+    x: stage.getWidth() / 2,
+    y: stage.getHeight() / 2,
+    radius: 70,
+    name:"imagen",
+    fill: 'red',
+    stroke: 'black',
+    strokeWidth: 4,
+    draggable:true
+  });
+    // add the shape to the layer
+  layer.add(circle);
+    // add the layer to the stage
+  stage.add(layer);
 }
 window.onload=inicio;
