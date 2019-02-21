@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.0.1/fabric.min.js"></script>
+<script src="paint.js" ></script>
+<link rel="stylesheet" href="paint.css">
+</head>
+
+<body>
+  <div class="menu">
+    <div class="archivo">
+      <!-- <a id="save" style="margin: 20px;" href="#"  download="MRH.png">Guardar como</a> -->
+      <!-- <input id="save" type="button" name="save" value="Guardar como..." style="margin: 20px;"> -->
+      <a id="download" download="MRH.png">
+    <button style="margin: 20px;" type="button" onClick="download()">Guardar</button>
+     </a>
+    </div>
+      <div class="imagen">
+          <input id="urls" type="text" name="urls" value="" placeholder="URL">
+          <input type="button" id="addImage" value="Add Image">
+      </div>
+      <div class="texo">
+          <input id="txt" type="text" name="txt" value="" placeholder="Texto">
+          <input type="button" id="texto" value="texto">
+      </div>
+
+
+      <div class="dibujaritems" style="margin:20px;">
+        <div class="draw">
+
+          <input type="button" id="dibujar" value="Dibujar">
+
+        </div>
+
+        <div class="tam">
+            <input id="5" onclick="tam(id);" type="button"  value="5">
+            <input id="9" onclick="tam(id);" type="button"  value="9">
+            <input id="15" onclick="tam(id);" type="button"  value="15">
+            <input id="50" onclick="tam(id);" type="button"  value="50">
+            <input id="90" onclick="tam(id);" type="button"  value="90">
+
+
+        </div>
+
+
+      </div>
+
+      <div class="tablaColores">
+        <input id="blue" onclick="color(id);" type="button" >
+        <input id="black" onclick="color(id);" type="button" >
+        <input id="pink" onclick="color(id);" type="button" >
+        <input id="green" onclick="color(id);" type="button" >
+        <input id="purple" onclick="color(id);" type="button" >
+        <input id="yellow" onclick="color(id);" type="button" >
+        <input id="orange" onclick="color(id);" type="button" >
+        <input id="red" onclick="color(id);" type="button" >
+        <input id="white" onclick="color(id);" type="button" >
+        <!-- <input id="arcoiris" onclick="color(id);" type="button" > -->
+        <input id="arcoiris" type="color">
+      </div>
+
+      <!-- <div class="tablaFiguras">
+
+      </div> -->
+
+
+
+  </div>
+
+<canvas id="c" width="1000" height="1000"></canvas>
+
+
+</body>
+
+</html>
