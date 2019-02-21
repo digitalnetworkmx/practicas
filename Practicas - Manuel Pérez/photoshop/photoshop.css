@@ -1,7 +1,7 @@
-#datos,#textoOpciones,#basura{
+#datos,#textoOpciones,#basura,#pincelOpciones{
   display: none;
 }
-#datos input, #textoOpciones input{
+#datos input, #textoOpciones input,#pincelOpciones input{
   background-color:rgb(66, 66, 66);
   color:white;
   padding:0em;
@@ -28,6 +28,13 @@
   background-repeat:no-repeat;
   background-size:contain;
 
+}
+#inputColorPincel{
+  margin-left:.3em;
+  margin-right:.3em;
+  width: 3em;
+  height: 1em;
+  background-color:black;
 }
 #btnColor{
   margin-left:.3em;

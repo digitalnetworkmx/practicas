@@ -1,5 +1,7 @@
 var seleccionado=null;
 var capaActual=null;
+var mode;
+var canvasActual=null;
 function inicio(){
   tiposDeLetra();
   var contenedor = new Konva.Stage({
@@ -25,6 +27,7 @@ function inicio(){
 function activarContenedor(contenedor){
   contenedor.on('click tap', function (e) {
     if (e.target === contenedor) {
+      mode="none";
       $(".escondible").css("display","none");
       contenedor.find('Transformer').destroy();
       try{
@@ -34,13 +37,25 @@ function activarContenedor(contenedor){
       }
       return;
     }
-    if (!e.target.hasName('imagen') &&  !e.target.hasName('texto')) {
+    if (!e.target.hasName('imagen') &&  !e.target.hasName('texto') && !e.target.hasName('dibujo')) {
+      mode="none";
       $(".escondible").css("display","none");
       return;
     }
+    if(e.target.hasName("dibujo")){
+      if(mode=="brush" || mode=="eraser"){
+        return;
+      }
+      contenedor.find('Transformer').destroy();
+      $(".escondible").css("display","none");
+      $("#basura").css("display","flex");
+      agregarOpcionesCanvas(e.target,contenedor);
+    }
+    mode="none";
     if(e.target.hasName("texto")){
       $(".escondible").css("display","flex");
       $("#datos").css("display","none");
+      $("#pincelOpciones").css("display","none");
       contenedor.find('Transformer').destroy();
       try{
         capaActual.draw();
@@ -51,6 +66,7 @@ function activarContenedor(contenedor){
     if(e.target.hasName("imagen")){
       $(".escondible").css("display","flex");
       $("#textoOpciones").css("display","none");
+      $("#pincelOpciones").css("display","none");
       contenedor.find('Transformer').destroy();
       var tr = new Konva.Transformer();
       e.target.parent.add(tr);
@@ -63,9 +79,19 @@ function activarContenedor(contenedor){
       }
       capaActual=e.target.parent;
       seleccionado = e.target;
-      ponerDatos(false);
+      ponerDatos("imagen");
     }
   });
+}
+function agregarOpcionesCanvas(e,contenedor){
+  capaActual=e.parent;
+  seleccionado=e;
+  contenedor.find('Transformer').destroy();
+  var tr = new Konva.Transformer();
+  e.parent.add(tr);
+  e.draggable(true);
+  tr.attachTo(e);
+  e.parent.draw();
 }
 function agregarImagen(contenedor){
   $("#btnAgregarImagen").click(function(){
@@ -95,7 +121,7 @@ function agregarImagen(contenedor){
       capa.add(img);
       contenedor.add(capa);
       img.on('transform', function () {
-      ponerDatos(false);
+      ponerDatos("imagen");
       capa.draw();
     });
     }
@@ -112,81 +138,125 @@ function agregarOpcionesTexto(e,contenedor){
   e.parent.add(tr);
   tr.attachTo(e);
   e.parent.draw();
-  ponerDatos(true);
+  ponerDatos("texto");
 }
 function pintar(stage){
-  // $("#btnPincel").click(function(){
-  //   var layer = new Konva.Layer();
-  //   stage.add(layer);
-  //   var canvas = document.createElement('canvas');
-  //   canvas.width = stage.width();
-  //   canvas.height = stage.height();
-  //   var image = new Konva.Image({
-  //     image: canvas,
-  //     x: stage.width() / 4,
-  //     y: stage.height() / 4,
-  //     stroke: 'green',
-  //     shadowBlur: 5
-  //   });
-  //   var context = canvas.getContext('2d');
-  //   context.strokeStyle = "#df4b26";
-  //   context.lineJoin = "round";
-  //   context.lineWidth = 5;image.on('mousedown touchstart', function () {
-  //     isPaint = true;
-  //     lastPointerPosition = stage.getPointerPosition();
-  //
-  //   });
-  //
-  //   // will it be better to listen move/end events on the window?
-  //
-  //   stage.addEventListener('mouseup touchend', function () {
-  //     isPaint = false;
-  //   });
-  //
-  //   // and core function - drawing
-  //   stage.addEventListener('mousemove touchmove', function () {
-  //     if (!isPaint) {
-  //       return;
-  //     }
-  //
-  //     if (mode === 'brush') {
-  //       context.globalCompositeOperation = 'source-over';
-  //     }
-  //     context.beginPath();
-  //
-  //     var localPos = {
-  //       x: lastPointerPosition.x - image.x(),
-  //       y: lastPointerPosition.y - image.y()
-  //     };
-  //     context.moveTo(localPos.x, localPos.y);
-  //     var pos = stage.getPointerPosition();
-  //     localPos = {
-  //       x: pos.x - image.x(),
-  //       y: pos.y - image.y()
-  //     };
-  //     context.lineTo(localPos.x, localPos.y);
-  //     context.closePath();
-  //     context.stroke();
-  //
-  //
-  //     lastPointerPosition = pos;
-  //     layer.batchDraw();
-  //   });
-  //
-  //
-  //
-  //   var select = document.getElementById("btnPincel");
-  //   select.addEventListener('change', function () {
-  //     mode = select.value;
-  //   });
-  // });
+  $("#btnPincel").click(function(){
+    if(mode=="eraser"){
+
+      mode="brush";
+      return;
+    }
+    if(mode=="brush"){
+      mode="none";
+      $(".escondible").css("display","none");
+      return;
+    }
+    var layer = new Konva.Layer();
+    stage.add(layer);
+
+    // then we are going to draw into special canvas element
+    var canvas = document.createElement('canvas');
+    canvas.width = stage.width()-20;
+    canvas.height = stage.height()-20;
+    // created canvas we can add to layer as "Konva.Image" element
+    var image = new Konva.Image({
+      image: canvas,
+      x: 10,
+      draggable:false,
+      y: 55,
+      name:"dibujo",
+    });
+    layer.add(image);
+    stage.draw();
+
+    // Good. Now we need to get access to context element
+    var context = canvas.getContext('2d');
+    context.strokeStyle = "#000000";
+    context.lineJoin = "round";
+    context.lineWidth = 5;
+    canvas=context;
+    var isPaint = false;
+    var lastPointerPosition;
+
+
+    // now we need to bind some events
+    // we need to start drawing on mousedown
+    // and stop drawing on mouseup
+    image.on('mousedown touchstart', function () {
+      isPaint = true;
+      lastPointerPosition = stage.getPointerPosition();
+
+    });
+
+    // will it be better to listen move/end events on the window?
+
+    image.addEventListener('mouseup touchend', function () {
+      isPaint = false;
+    });
+
+    // and core function - drawing
+    image.addEventListener('mousemove touchmove', function () {
+      if (!isPaint) {
+        return;
+      }
+      if(mode=="none"){
+        return;
+      }
+      if (mode === 'brush') {
+        context.globalCompositeOperation = 'source-over';
+      }
+      if (mode === 'eraser') {
+        context.globalCompositeOperation = 'destination-out';
+      }
+      context.beginPath();
+
+      var localPos = {
+        x: lastPointerPosition.x - image.x(),
+        y: lastPointerPosition.y - image.y()
+      };
+      context.moveTo(localPos.x, localPos.y);
+      var pos = stage.getPointerPosition();
+      localPos = {
+        x: pos.x - image.x(),
+        y: pos.y - image.y()
+      };
+      context.lineTo(localPos.x, localPos.y);
+      context.closePath();
+      context.stroke();
+      lastPointerPosition = pos;
+      layer.batchDraw();
+    });
+    canvasActual=canvas;
+    mode="brush";
+    $(".escondible").css("display","none");
+    $("#pincelOpciones").css("display","flex");
+    ponerDatos("canvas");
+  });
+  $("#btnBorrador").click(function(){
+    if(mode=="erase"){
+      mode="none";
+      $(".escondible").css("display","none");
+      return;
+    }
+    mode="eraser";
+    $(".escondible").css("display","none");
+    $("#pincelOpciones").css("display","flex");
+    ponerDatos("canvas");
+  })
 }
 function ponerDatos(texto){
+  if(texto=="canvas"){
+    console.log(canvasActual.lineWidth);
+    $("#inputColorPincel").val(canvasActual.strokeStyle);
+    $("#inputTamañoPincel").val(canvasActual.lineWidth);
+    return;
+  }
   $("#rotacion").val(seleccionado.rotation()+"");
   $("#anchura").val(seleccionado.width()*seleccionado.scaleY()+"");
   $("#altura").val(seleccionado.height()*seleccionado.scaleX()+"");
   $("#opacity").val(seleccionado.opacity()+"");
-  if(texto){
+  if(texto=="texto"){
     $("#opacityTexto").val(seleccionado.opacity()+"");
     $("#rotacionTexto").val(seleccionado.rotation()+"");
     $("#inputTextoEscrito").val(seleccionado.text()+"");
@@ -250,6 +320,14 @@ function borrarImagen(contenedor){
   });
 }
 function inputs(contenedor){
+  $("input.pincel").change(function(){
+    if($(this).data().tipo=="strokeStyle"){
+      eval("canvasActual."+$(this).data().tipo+"='"+$(this).val()+"';");
+      return;
+    }
+    var x = "canvasActual."+$(this).data().tipo+"="+$(this).val()+";";
+    eval(x);
+  });
   $("input.datos").change(function(){
     console.log("Cambio o no cambio");
     if($(this).data().tipo=="fill" || $(this).data().tipo=="text"){
@@ -315,7 +393,7 @@ function btnAgregarTexto(contenedor){
       draggable:true
     });
     texto.on('transform', function () {
-      ponerDatos(true);
+      ponerDatos("texto");
       capa.draw();
     });
     capa.add(texto);
