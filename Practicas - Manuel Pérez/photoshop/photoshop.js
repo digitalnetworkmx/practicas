@@ -143,7 +143,6 @@ function agregarOpcionesTexto(e,contenedor){
 function pintar(stage){
   $("#btnPincel").click(function(){
     if(mode=="eraser"){
-
       mode="brush";
       return;
     }
@@ -162,8 +161,8 @@ function pintar(stage){
     // created canvas we can add to layer as "Konva.Image" element
     var image = new Konva.Image({
       image: canvas,
-      x: 10,
       draggable:false,
+      x: 10,
       y: 55,
       name:"dibujo",
     });
@@ -178,8 +177,6 @@ function pintar(stage){
     canvas=context;
     var isPaint = false;
     var lastPointerPosition;
-
-
     // now we need to bind some events
     // we need to start drawing on mousedown
     // and stop drawing on mouseup
