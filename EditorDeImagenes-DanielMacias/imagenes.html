@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Editor de imagenes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://semantic-ui.com/dist/components/icon.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/21.0.1/min/jcanvas.min.js"></script>
+    <script src="https://unpkg.com/konva@2.4.2/konva.min.js"></script>
+    <script src="imagenes.js"></script>
+  </head>
+  <body style="background-color:#97CAF0;">
+    <div class="ui container">
+      <div class="ui fluid container" style="margin:20px;text-align:center; background-color:#97CAF0;">
+        <h2 class="ui icon header">
+          <i class="paint brush icon blue"></i>
+          <div class="content">
+            Editor de imagenes
+            <div class="sub header">Agrega y edita las imágenes que más te gusten.</div>
+          </div>
+        </h2>
+      </div>
+
+      <div class="ui fluid container" id="barraArribaIzquierda" style="margin:30px 0px;width:40%;text-align:center">
+        <button class="ui icon large button" id="subirImagen" data-tooltip="Agregar imagen al lienzo">
+          <i class='upload icon'></i>
+        </button>
+        <button class="ui icon large button" id="addLetras" data-tooltip="Agregar texto">
+          <i class='font icon'></i>
+        </button>
+        <button class="ui icon large button" id="dibujarEnImagen" data-tooltip="Dibujar en el lienzo">
+          <i class="paint brush icon"></i>
+        </button>
+        <button class="ui icon large button" id="leaveDraw" data-tooltip="Dejar de dibujar en el lienzo">
+          <i class="times alternate icon"></i>
+        </button>
+        <button class="ui icon large button" id="addShapes" data-tooltip="Agregar figuras en el lienzo">
+          <i class="crop icon"></i>
+        </button>
+        <button class="ui icon large button" id="limpiar" data-tooltip="Agregar figuras en el lienzo">
+          <i class="trash icon"></i>
+        </button>
+        <button class="ui icon large button" id="descargar" data-tooltip="Descargar el lienzo">
+          <i class="download icon"></i>
+        </button>
+      </div>
+
+      <div class="ui fluid container" id="barraSuperiorFigura" style="margin:30px 0px;display:none;flex-direction:row;justify-content:center;align-items:center">
+        <h2 class="ui header" style="display:flex;justify-content:center;align-items:center">
+          <i class="crop icon"></i>
+          <div class="content">
+            Diseño de figura
+          </div>
+        </h2>
+        <button class="ui labeled red icon button" id="borrarShape" data-tooltip="Borrar imagen del lienzo" style="margin:0px 5px;height:40px">
+          <i class="eraser icon"></i>
+          Borrar
+        </button>
+        <button class="ui labeled violet icon button" id="restablecerShape" data-tooltip="Restablecer estilo" style="margin:0px 5px;height:40px">
+          <i class="clipboard icon"></i>
+          Restablecer
+        </button>
+
+        <form class="ui form" id="formHerramientasP" style="margin:20px;display:flex;flex-direction:row;justify-content:center;align-items:baseline">
+          <div class="field" style="margin:0px 10px">
+            <label>Color de figura</label>
+            <input type="color" name="colorF" id="colorF">
+          </div>
+
+          <div class="field" style="margin:0px 10px">
+            <label>Color de contorno</label>
+            <input type="text" name="colorStroke" id="colorStroke">
+          </div>
+        </form>
+      </div>
+
+      <div class="ui fluid container" id="barraSuperior" style="margin:30px 0px;display:none;flex-direction:row;justify-content:center;">
+        <h2 class="ui header" style="display:flex;justify-content:center;align-items:center">
+          <i class="pencil icon"></i>
+          <div class="content">
+            Diseño de pincel
+          </div>
+        </h2>
+
+        <form class="ui form" id="formHerramientasP" style="margin:20px;display:flex;flex-direction:row;justify-content:center;align-items:baseline">
+          <div class="field" style="margin:0px 10px">
+            <label>Tamaño del pincel</label>
+            <input type="range" name="sizeP" id="sizeP" min="1" max="100" step="0.5" value="8">
+          </div>
+
+          <div class="field" style="margin:0px 10px">
+            <label>Color del pincel</label>
+            <input type="color" name="colorP" id="colorP" placeholder="Color de letra">
+          </div>
+
+          <div class="field" style="margin:0px 10px">
+            <label>Pincel</label>
+            <div class="ui fluid selection dropdown">
+              <input type="hidden" name="PincelEdit" id="PincelEdit">
+              <div class="text" id="pin">Brush</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="brush">Brush</div>
+                <div class="item" data-value="eraser">Eraser</div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="seccionMedia" style="display:flex;justify-content:space-around;">
+        <div class="ui fluid container" id="barraIzquierda" style="margin:0px;width:150px;display:none;flex-direction:column;justify-content:center;">
+          <h2 class="ui header">
+            <i class="pencil icon"></i>
+            <div class="content">
+              Diseño de texto
+            </div>
+          </h2>
+          <button class="ui labeled red icon button" id="borrarTexto" data-tooltip="Borrar imagen del lienzo" style="margin:5px 0px;">
+            <i class="eraser icon"></i>
+            Borrar
+          </button>
+          <button class="ui labeled violet icon button" id="restablecerTexto" data-tooltip="Restablecer estilo" style="margin:5px 0px;">
+            <i class="clipboard icon"></i>
+            Restablecer
+          </button>
+          <button class="ui labeled black icon button" id="boldTexto" data-tooltip="Establecer negritas" style="margin:5px 0px;">
+            <i class="bold icon"></i>
+            Negritas
+          </button>
+          <button class="ui labeled brown icon button" id="italicTexto" data-tooltip="Establecer cursiva" style="margin:5px 0px;">
+            <i class="italic icon"></i>
+            Italic
+          </button>
+          <button class="ui labeled primary icon button" id="normalTexto" data-tooltip="Establecer texto normal" style="margin:5px 0px;">
+            <i class="font icon"></i>
+            Normal
+          </button>
+
+          <form class="ui form" id="formHerramientasTxt">
+            <div class="field">
+              <label>Texto</label>
+              <input type="text" name="nodoTextoEdit" id="nodoTextoEdit" placeholder="Editar texto">
+            </div>
+
+            <div class="field">
+              <label>Tamaño del texto</label>
+              <input type="number" name="fontsizeEdit" id="fontsizeEdit" placeholder="Tamaño de letra" min="9" max="100">
+            </div>
+
+            <div class="field">
+              <label>Color del texto</label>
+              <input type="color" name="colorFontEdit" id="colorFontEdit" placeholder="Color de letra">
+            </div>
+
+            <div class="field">
+              <label>Tipografía</label>
+              <div class="ui fluid selection dropdown">
+                <input type="hidden" name="fontTextoEdit" id="fontTextoEdit">
+                <div class="text" id="tF"></div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item" data-value="Arial">Arial</div>
+                  <div class="item" data-value="Calibri">Calibri</div>
+                  <div class="item" data-value="Comic Sans">Comic Sans</div>
+                  <div class="item" data-value="Georgia">Georgia</div>
+                  <div class="item" data-value="Impact">Impact</div>
+                  <div class="item" data-value="Verdana">Verdana</div>
+                  <div class="item" data-value="Times New Roman">Times New Roman</div>
+                  <div class="item" data-value="Courier New">Courier New</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Lienzo -->
+        <div id="lienzo" style="border:1px solid black;width:700px;height:700px;background-color:white;"></div>
+
+        <div class="ui fluid container" id="barraDerecha" style="margin:0;width:150px;display:none;flex-direction:column;justify-content:center;">
+          <h2 class="ui header">
+            <i class="plug icon"></i>
+            <div class="content">
+              Diseño de imágen
+            </div>
+          </h2>
+          <button class="ui labeled red icon button" id="borrarImagen" data-tooltip="Borrar imagen del lienzo" style="margin:5px 0px;">
+            <i class="eraser icon"></i>
+            Borrar
+          </button>
+          <button class="ui labeled violet icon button" id="restablecerImagen" data-tooltip="Restablecer imagen" style="margin:5px 0px;">
+            <i class="clipboard icon"></i>
+            Restablecer
+          </button>
+          <button class="ui labeled teal icon button" id="invertirImagen" data-tooltip="Invertir color de una imagen" style="margin:5px 0px;">
+            <i class="eraser icon"></i>
+            Invertir color
+          </button>
+          <button class="ui labeled gray icon button" id="grisesImagen" data-tooltip="Invertir color de una imagen" style="margin:5px 0px;">
+            <i class="eraser icon"></i>
+            Escala de gris
+          </button>
+
+          <form class="ui form" id="formHerramientas">
+            <div class="field">
+              <label>Brillo</label>
+              <input id="sliderBrillo" type="range" min="-1" max="1" step="0.05" value="0">
+            </div>
+            <div class="field">
+              <label>Contraste</label>
+              <input id="sliderContraste" type="range" min="-100" max="100" step="1" value="0">
+            </div>
+            <div class="field">
+              <label>Pixelado</label>
+              <input id="sliderPixelado" type="range" min="1" max="20" step="0.05" value="1">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="ui modal" id="seleccionarE">
+        <div class="header">
+          Seleccionar archivo
+        </div>
+        <div class="content">
+          <div class="ui small message teal compact">
+            <div class="header">
+              Solo es posible agregar la imagen mediante un método
+            </div>
+            <p>Ya sea por una URL de internet o un archivo local</p>
+          </div>
+          <form class="ui form small" id="form">
+            <div class="field">
+              <label>URL de la imágen</label>
+              <input type="text" name="urlIma" id="urlIma" placeholder="Escribe la URL">
+            </div>
+            <div class="ui horizontal divider">
+              Ó
+            </div>
+            <div class="field">
+              <label>Seleccionar archivo</label>
+              <input type="file" name="archivo" id="archivo" placeholder="Escribe la URL">
+            </div>
+          </form>
+        </div>
+        <div class="actions">
+          <div class="ui negative left labeled icon button">
+            <i class="times icon"></i>
+            Cancelar
+          </div>
+          <div class="ui green left labeled icon button" id="grdCambios">
+            <i class="save icon"></i>
+            Guardar cambios
+          </div>
+        </div>
+      </div>
+
+      <div class="ui modal" id="modalTexto">
+        <div class="header">
+          Establecer texto
+        </div>
+        <div class="content">
+          <div class="ui small message teal compact">
+            <div class="header">
+              Solo es posible agregar la imagen mediante un método
+            </div>
+            <p>Ya sea por una URL de internet o un archivo local</p>
+          </div>
+          <form class="ui form small" id="formTexto">
+            <div class="field">
+              <label>Texto</label>
+              <input type="text" name="nodoTexto" id="nodoTexto" placeholder="Editar texto">
+            </div>
+
+            <div class="two fields">
+              <div class="field">
+                <label>Tamaño del texto</label>
+                <input type="number" name="fontsize" id="fontsize" placeholder="Tamaño de letra" min="9" max="100">
+              </div>
+
+              <div class="field">
+                <label>Estilo del texto</label>
+                <div class="ui fluid selection dropdown">
+                  <input type="hidden" name="estiloTexto" id="estiloTexto">
+                  <div class="default text">Estilo de fuente</div>
+                  <i class="dropdown icon"></i>
+                  <div class="menu">
+                    <div class="item" data-value="normal">Normal</div>
+                    <div class="item" data-value="italic">Italica</div>
+                    <div class="item" data-value="bold">Negritas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Tipografía</label>
+              <div class="ui fluid selection dropdown">
+                <input type="hidden" name="fontTexto" id="fontTexto">
+                <div class="default text">Tipo de fuente</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item" data-value="Arial">Arial</div>
+                  <div class="item" data-value="Calibri">Calibri</div>
+                  <div class="item" data-value="Comic Sans">Comic Sans</div>
+                  <div class="item" data-value="Georgia">Georgia</div>
+                  <div class="item" data-value="Impact">Impact</div>
+                  <div class="item" data-value="Verdana">Verdana</div>
+                  <div class="item" data-value="Times New Roman">Times New Roman</div>
+                  <div class="item" data-value="Courier New">Courier New</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="actions">
+          <div class="ui negative left labeled icon button">
+            <i class="times icon"></i>
+            Cancelar
+          </div>
+          <div class="ui green left labeled icon button" id="grdCambiosTxt">
+            <i class="save icon"></i>
+            Guardar cambios
+          </div>
+        </div>
+      </div>
+
+      <div class="ui modal mini" id="modalShape">
+        <div class="header">
+          Escoge la figura que desees
+        </div>
+        <div class="content">
+          <div class="ui small message teal compact">
+            <div class="header">
+              Es necesario llenar los siguientes campos con asterístico (*)
+            </div>
+            <p>Aquellos que no cuenten con ello son opcionales</p>
+          </div>
+          <form class="ui form small" id="formFigura">
+            <div class="field required">
+              <label>Elige una figura</label>
+              <div class="ui fluid selection dropdown">
+                <input type="hidden" name="shapeChoose" id="shapeChoose">
+                <div class="default text" id="sC">Escoge el tipo de figura</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item" data-value="circle">Circulo</div>
+                  <div class="item" data-value="rect">Rectángulo</div>
+                  <div class="item" data-value="polygon">Polígono</div>
+                  <div class="item" data-value="star">Estrella</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="actions">
+          <div class="ui negative left labeled icon button">
+            <i class="times icon"></i>
+            Cancelar
+          </div>
+          <div class="ui green left labeled icon button" id="grdShape">
+            <i class="save icon"></i>
+            Guardar
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
