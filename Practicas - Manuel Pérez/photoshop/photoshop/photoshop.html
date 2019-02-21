@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/konva@2.4.2/konva.min.js"></script>
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/init.js"></script>
+    <link rel="stylesheet" href="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.css">
+    <script src="https://requenahdz.github.io/firebase/asset/iziToast/iziToast.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="photoshop.js"></script>
+    <link rel="stylesheet" href="photoshop.css">
+  </head>
+  <body>
+    <div id="modalImagen" class="ui modal">
+      <div class="header">
+        Añadir una imagen
+      </div>
+      <div class="content">
+        <form class="ui form">
+          <div class="field">
+            <label for="">Ingrese la url de imagen</label>
+            <input type="text" id="inputImagen" name="inputImagen">
+          </div>
+          <div class="field">
+            <div class="ui blue button labeled icon" id="btnArchivos">
+              <i class="icon search"></i> Buscar imagen local
+            </div>
+            <input type="file" id="inputArchivos" style="display:none">
+          </div>
+        </form>
+      </div>
+      <div class="actions">
+        <div class="ui cancel red button"><i class="icon cancel"></i>Cancelar</div>
+        <div id="btnAgregarImagen" class="ui positive button"><i class="icon save"></i>Agregar</div>
+      </div>
+    </div>
+    <div id="modalTexto" class="ui modal">
+      <div class="header">Agregar Texto</div>
+      <div class="content">
+        <form class="ui form" action="">
+          <div class="field">
+            <label for="">Texto</label>
+            <input type="text" id="inputTexto">
+          </div>
+        </form>
+      </div>
+      <div class="actions">
+        <div class="ui button red negative"><i class="cancel icon"></i> Cancelar</div>
+        <div class="ui button green positive" id="btnAgregarTexto"><i class="save icon"></i> Añadir Texto</div>
+      </div>
+    </div>
+    <section id="drop">
+    </section>
+    <header id="menu" class="ui fixed inverted menu">
+      <div class="item">
+        <div id="btnImagen"></div>
+      </div>
+      <div class="item" id="btnAbrirModalTexto">
+        <i class="heading icon "></i>
+      </div>
+      <div class="item" id="btnPincel"><i class="paint brush icon"></i></div>
+      <div class="item" id="btnBorrador"><i class="eraser icon"></i></div>
+      <div id="basura" class="item basura escondible">
+        <i class="trash red icon"></i>
+      </div>
+      <div id="datos" class="item escondible">
+        <label for="">rotacion:</label>
+        <input type="number" class="datos" max=360 min=0 id="rotacion" data-tipo="rotation">
+        <label for="">Anchura:</label>
+        <input type="number" class="datos" id="anchura" maxlength=5 max=2000 data-tipo="width">
+        <label for="">Altura:</label>
+        <input type="number" class="datos" id="altura" data-tipo="height">
+        <label for="">Ocapacidad:</label>
+        <input type="number" class="datos" id="opacity" max=1 min=0 step=.1 data-tipo="opacity">
+      </div>
+      <div id="textoOpciones" class="item escondible">
+        <label for="">rotacion</label>
+        <input type="number" class="datos" max=360 min=0 id="rotacionTexto" data-tipo="rotation">
+        <input type="color" class="datos"id="inputColor" data-tipo="fill">
+        <label for="">Tamaño</label>
+        <input type="number" class="datos" max=200 min=1 id="inputTamañoTexto" data-tipo="fontSize">
+        <label for="">Texto</label>
+        <input type="text" data-tipo="text" id="inputTextoEscrito" class="datos">
+        <label for="">Ocapacidad:</label>
+        <input type="number" class="datos" id="opacityTexto" max=1 min=0 step=.1 data-tipo="opacity">
+        <select name="dropdown" data-tipo="fontFamily" class="datos" id="tiposDeLetra"></select>
+      </div>
+      <div id="pincelOpciones" class="escondible item">
+        <label for="">Tamaño</label>
+        <input type="range"id="inputTamañoPincel" min=1 max=150 data-tipo="lineWidth" class="pincel">
+        <input type="color" data-tipo="strokeStyle" id="inputColorPincel" class="pincel">
+      </div>
+      <div class="item" id="figuras">
+        Figuras:
+        <select name="drop" class="figuras" id="dropFiguras">
+          <option value="Anillo">Anillo</option>
+          <option value="Rectangulo">Rectangulo</option>
+          <option value="Estrella">Estrella</option>
+          <option value="Circulo">Circulo</option>
+        </select>
+      </div>
+    </header>
+  </body>
+</html>
