@@ -1,0 +1,350 @@
+body{
+  margin:0;
+  background-color: lightblue;
+}
+.contenedor{
+  /* border:1px solid black; */
+  width: 100%;
+  height: 120px;
+  background-color: #CDCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hoja{
+  width: 700px;
+  height: 700px;
+  background-color: white;
+  margin: 5px;
+}
+
+.portapapeles{
+  height: 100%;
+  width: 150px;
+  border:1px solid black;
+  text-align: center;
+}
+
+.arriba{
+  width: 100%;
+  height: 100px;
+  /* border:1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abajo{
+  width: 100%;
+  height: 26.5px;
+  /* border:1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.derecha{
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid green; */
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.izquierda{
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid purple; */
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenClipBoard{
+  background-image: url("https://www.clipartmax.com/png/middle/219-2198390_empty-white-clipboard-comments-clipboard-outline.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+#boton{
+  width: 53px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#desplegarPegar{
+  width: 53px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagenes{
+  border:1px solid black;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  justify-content: space-around;
+  align-items: center;
+  padding:0 5px 0 5px;
+}
+
+#dibujar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* border:1px solid red; */
+  width: 53px;
+  height: 50px;
+}
+
+.herramientas{
+  border: 1px solid black;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.imagenPincel{
+  background-image: url("https://image.flaticon.com/icons/png/512/45/45135.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:7px 10px 10px 10px;
+}
+
+#desplegarPinceles{
+  width: 53px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+#color1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85%;
+  border:1px solid transparent;
+  background-color:#CDCCCC;
+}
+
+#color1:hover{
+  /* background-color:#4DC8E6; */
+  background-color:rgba(0,0,255,0.2);
+  border:1px solid lightblue;
+
+}
+
+#color2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85%;
+  border:1px solid transparent;
+  background-color:#CDCCCC;
+}
+
+#color2:hover{
+  background-color:rgba(0,0,255,0.2);
+  border:1px solid lightblue;
+}
+
+.detras{
+  width: 30px;
+  height: 30px;
+  border:1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuadro1{
+width: 25px;
+height: 25px;
+  background-color: black;
+}
+
+
+.colores{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  height: 100%;
+  padding: 5px;
+  border:1px solid black;
+}
+
+.cuadro2{
+  width: 27px;
+  height: 27px;
+  border:1px solid grey;
+  background-color: white;
+}
+
+.secundario{
+  height: 100px;
+  /* border:1px solid black; */
+}
+
+.principal{
+  height: 100px;
+  /* border:1px solid black; */
+}
+
+.todosColores{
+  /* border: 1px solid black; */
+  height: 100%;
+  width:160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* flex-wrap:wrap; */
+
+}
+
+.fila{
+  /* border: 1px solid black; */
+  margin: 0;
+}
+
+#black{
+  width: 25px;
+  height: 25px;
+  background-color: black;
+}
+
+#grey{
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+}
+
+#red{
+  width: 25px;
+  height: 25px;
+  background-color: red;
+}
+
+#orange{
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+}
+
+#yellow{
+  width: 25px;
+  height: 25px;
+  background-color: yellow;
+}
+
+#green{
+  width: 25px;
+  height: 25px;
+  background-color: green;
+}
+
+#lightblue{
+  width: 25px;
+  height: 25px;
+  background-color: lightblue;
+}
+
+#blue{
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+}
+
+#pink{
+  width: 25px;
+  height: 25px;
+  background-color: pink;
+}
+
+#purple{
+  width: 25px;
+  height: 25px;
+  background-color: purple;
+}
+
+.tamaño{
+  border: 1px solid black;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#botonTamaño{
+  height: 60px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagenTamaños{
+  background-image: url("https://previews.123rf.com/images/vectora/vectora1511/vectora151100386/48271354-patr%C3%B3n-de-l%C3%ADneas-horizontales-recto-l%C3%ADneas-paralelas-horizontalmente-sin-fisuras-.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 25px;
+}
+
+.imagenGuardar{
+  background-image: url("https://cdn.icon-icons.com/icons2/936/PNG/512/download-to-storage-drive_icon-icons.com_73590.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  /* border: 1px solid black; */
+  margin-bottom: 5px;
+}
+
+#botonGuardar{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
