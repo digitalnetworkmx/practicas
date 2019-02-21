@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Photoshop</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.0.1/fabric.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="photoshop.js"></script>
+  <link rel="stylesheet" href="photoshop.css">
+</head>
+<body>
+  <div class="ui top fixed menu" id="menu">
+    <div class="item">
+      <div class="imagen"></div>
+    </div>
+    <div class="item">
+      <i class="save icon"></i>
+    </div>
+    <div class="item"><i class="edit outline icon"></i>
+    </div>
+    <div class="item"><i class="trash alternate icon" id="basura"></i>
+    </div>
+    <div class="pintar">
+      <div class="item" id="lapiz">
+        <i class="pencil alternate icon"></i>
+      </div>
+      <div class="item" id="marcador">
+        <i class="magic icon"></i>
+      </div>
+      <div class="item" id="brocha">
+        <i class="paint brush icon"></i>
+      </div>
+      <div class="item" id="borrar">
+        <i class="eraser icon white"></i>
+      </div>
+      <div class="item" id="regresar">
+        <i class="reply icon grey"></i>
+      </div>
+    </div>
+    <!-- <div class="lista">
+  <select class="ui search dropdown" id="selector">
+  <option value="">Tipo de letra</option>
+  <option value="Arial">Arial</option>
+  <option value="Comic Sans">Comic Sans</option>
+  <option value="Georgia">Georgia</option>
+</select>
+    </div> -->
+    <!-- <div class="ui button green" id="cambiar">
+      Cambiar
+    </div> -->
+  </div>
+  <div class="contenedor">
+    <div class="cuadro">
+      <div class="imagenes">
+        <div class="imagen1"></div>
+        <div class="imagen2"></div>
+        <div class="imagen3"></div>
+        <div class="imagen4"></div>
+        <div class="imagen5"></div>
+      </div>
+    </div>
+    <div class="plantilla" id="plantilla">
+      <canvas id="canvas" width="1500" height="700"></canvas>
+    </div>
+  </div>
+  <div class="ui modal" id="modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Insertar Imagen
+    </div>
+    <div class="image content">
+      <form class="ui form" id="form">
+        <div class="field required">
+          <label>Inserte el URL de la Imagen</label>
+          <div class="ui fluid icon input">
+            <input type="text" placeholder="Ej. https://es.seaicons.com/wp-content/uploads/2015/11/arrow-upload-icon.png" id="url" autocomplete="off">
+            <i class="image icon"></i>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui red deny button" id="cancelar">
+        Cancelar
+      </div>
+      <div class="ui right labeled icon button green" id="subir">
+        Subir
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="ui modal" id="modal2">
+    <i class="close icon"></i>
+    <div class="header">
+      Insertar Imagen
+    </div>
+    <div class="image content" id="content">
+      <input type="file" name="" value="" class="file" id="file">
+      <div class="ui labeled icon button green" id="boton">
+        <i class="search icon"></i>
+        Buscar Imagen Local
+      </div>
+      <form class="ui form" id="form">
+        <div class="field required">
+          <label>URL de la Imagen</label>
+          <div class="ui fluid icon input">
+            <input type="text" placeholder="Ej. https://es.seaicons.com/wp-content/uploads/2015/11/arrow-upload-icon.png" id="url2" autocomplete="off">
+            <i class="image icon"></i>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui red deny button" id="cancelar2">
+        Cancelar
+      </div>
+      <div class="ui right labeled icon button green" id="subir2">
+        Subir
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="ui tiny modal" id="modal3">
+    <i class="close icon"></i>
+    <div class="header">
+      Editar color de fondo
+    </div>
+    <div class="image content" id="content">
+      <form class="ui form" id="form">
+        <div class="field required">
+          <label>Eliga color de fondo</label>
+            <input type="color" name="color"  id="color">
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui red deny button" id="cancelar3">
+        Cancelar
+      </div>
+      <div class="ui right labeled icon button green" id="subir3">
+      Colocar
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui modal" id="modal4">
+    <i class="close icon"></i>
+    <div class="header">
+      Agregar un texto
+    </div>
+    <div class="image content" id="content">
+      <form class="ui form" id="form">
+        <div class="field required">
+          <label>Agrega un texto</label>
+            <div class="ui input">
+              <input type="text" name="texto" value="" id="texto">
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui red deny button" id="cancelar4">
+        Cancelar
+      </div>
+      <div class="ui right labeled icon button green" id="subir4">
+      Colocar
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="ui tiny modal" id="modal5">
+    <i class="close icon"></i>
+    <div class="header">
+      Editar color lapiz
+    </div>
+    <div class="image content" id="content">
+      <form class="ui form" id="form">
+        <div class="field required">
+          <label>Eliga color de lapiz</label>
+            <input type="color" name="color"  id="color2">
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui red deny button" id="cancelar5">
+        Cancelar
+      </div>
+      <div class="ui right labeled icon button green" id="subir5">
+      Colocar
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="ui modal" id="modal6">
+    <i class="close icon"></i>
+    <div class="header">
+      Agregar un texto
+    </div>
+    <div class="image content" id="content">
+      <form class="ui form" id="form">
+        <div class="field required">
+          <label>Agrega un parrafo</label>
+            <textarea id="texto2"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui red deny button" id="cancelar6">
+        Cancelar
+      </div>
+      <div class="ui right labeled icon button green" id="subir6">
+      Colocar
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
