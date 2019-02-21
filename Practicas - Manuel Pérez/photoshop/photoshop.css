@@ -1,0 +1,46 @@
+#datos,#textoOpciones,#basura{
+  display: none;
+}
+#datos input, #textoOpciones input{
+  background-color:rgb(66, 66, 66);
+  color:white;
+  padding:0em;
+  padding-left:.5em;
+  padding-right:.5em;
+  margin-left:.5em;
+  margin-right:.5em;
+  height:100%;
+  border-radius: .5em;
+  border:0em;
+}
+#btnImagen{
+  width:2em;
+  height:2em;
+  background-size:contain;
+  background-position: center;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/08/18/34/camera-1724286_960_720.png);
+}
+.imagen{
+  width:10em;
+  height:10em;
+  background-color:transparent;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size:contain;
+
+}
+#btnColor{
+  margin-left:.3em;
+  margin-right:.3em;
+  width: 1em;
+  height: 1em;
+  background-color:black;
+}
+select{
+  border:0;
+  padding:0;
+  background-color:rgb(66, 66, 66);
+  height:1.9em;
+  border-radius: .5em;
+  color:white;
+}
