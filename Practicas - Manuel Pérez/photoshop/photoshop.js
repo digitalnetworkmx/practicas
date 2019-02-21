@@ -351,7 +351,7 @@ function inputs(contenedor){
   });
   $("select.figuras").change(function(){
     eval("agregar"+$(this).val()+"(contenedor)");
-  })
+  });
 }
 function imagenAcciones(){
   $(".imagen").dblclick(function(){
